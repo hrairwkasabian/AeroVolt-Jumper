@@ -1,0 +1,2826 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <!-- Ensure proper scaling on mobile devices -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="AeroVolt - The only proven jump-training system that transforms your vertical jump in 37 days.">
+  <title>AeroVolt| Transform Your Vertical Jump</title>
+  <style>
+    /* RESET & BASE STYLES */
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      background-color: #000;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      line-height: 1.5;
+      padding: 20px;
+    }
+    a {
+      color: #FFC600;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* TOP NAVIGATION */
+    header nav.top-nav {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-bottom: 30px;
+      flex-wrap: wrap;
+    }
+    header nav.top-nav a.nav-item {
+      background-color: #000;
+      border: 2px solid #ff0000;
+      padding: 10px 15px;
+      font-size: 1em;
+      font-weight: bold;
+      text-transform: uppercase;
+      transition: background-color 0.3s ease;
+    }
+    header nav.top-nav a.nav-item:hover {
+      background-color: #111;
+    }
+
+    /* COMMON CONTAINER */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    h1, h2, h3 {
+      margin-bottom: 15px;
+    }
+
+    /* SECTION STYLES */
+    .section {
+      padding: 20px 0;
+    }
+
+    /* Section 1 - Hero Section */
+    .hero {
+      text-align: center;
+    }
+    .hero .headline {
+      font-size: 3em;
+      font-weight: bold;
+      color: #FFC600;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+    .hero .subheadline {
+      font-size: 1.5em;
+      font-style: italic;
+      color: #ccc;
+      margin-bottom: 30px;
+    }
+    .hero .highlight-box {
+      display: inline-block;
+      border: 3px solid #FFC600;
+      padding: 20px 30px;
+      margin-bottom: 30px;
+    }
+    .hero .highlight-box h2 {
+      font-size: 1.8em;
+      color: #FFC600;
+      text-transform: uppercase;
+    }
+    .hero .description {
+      font-size: 1.2em;
+      margin-bottom: 30px;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .hero .video-container iframe {
+      width: 100%;
+      height: 450px;
+      border: none;
+    }
+
+    /* Section 2 - Guaranteed Section */
+    .guarantee {
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .guarantee .headline {
+      font-size: 2.2em;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+    .guarantee .content p {
+      font-size: 1.2em;
+      margin-bottom: 1em;
+    }
+    .guarantee .highlight {
+      color: #FFC600;
+      font-weight: bold;
+    }
+
+    /* Section 3 - Vertical Jump Proof */
+    .proof {
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .proof .headline {
+      font-size: 2em;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+    .proof .sub-lines p {
+      font-size: 1.2em;
+      margin-bottom: 10px;
+    }
+
+    /* Section 4 - Testimonials Grid */
+    .testimonials {
+      padding: 20px 0;
+    }
+    .testimonials h1 {
+      font-size: 2em;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .testimonials .video-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .testimonials .card {
+      background-color: #111;
+      border: 1px solid #333;
+      border-radius: 5px;
+      padding: 15px;
+      text-align: left;
+    }
+    .testimonials .card p {
+      font-size: 1em;
+      margin-bottom: 10px;
+    }
+    .testimonials .card iframe {
+      width: 100%;
+      height: 200px;
+      border: none;
+      border-radius: 3px;
+    }
+
+    /* Section 5 - Results Section */
+    .results {
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .results .headline {
+      font-size: 1.8em;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+    .results p {
+      font-size: 1.2em;
+      margin-bottom: 1em;
+    }
+
+    /* Section 6 - Buy Now (Single Video Promo) */
+    .buy-now {
+      text-align: center;
+      padding: 20px 0;
+    }
+    .buy-now .promo-heading {
+      font-size: 1.8em;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+    .buy-now .video-container iframe {
+      width: 100%;
+      height: 450px;
+      border: none;
+      border-radius: 5px;
+    }
+    .buy-now .caption {
+      font-size: 1.2em;
+      font-style: italic;
+    }
+
+    /* Section 7 - Let Me Be Clear */
+    .clarity {
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px 0;
+    }
+    .clarity p {
+      font-size: 1.2em;
+      margin-bottom: 1em;
+    }
+
+    /* Section 7.5 - Why My Program? */
+    .why-my-program {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+      text-align: left;
+    }
+    .why-my-program h1 {
+      font-size: 2em;
+      margin-bottom: 10px;
+      color: #FFC600;
+    }
+    .why-my-program p {
+      font-size: 1.1em;
+      margin-bottom: 1em;
+    }
+
+    /* Section 8 - Life Transformation */
+    .transformation {
+      text-align: left;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px 0;
+    }
+    .transformation h1 {
+      font-size: 2em;
+      margin-bottom: 20px;
+      color: #FFC600;
+    }
+    .transformation p {
+      font-size: 1.1em;
+      margin-bottom: 1em;
+    }
+
+    /* Section 9 - Guarantee Box */
+    .guarantee-box-section {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+      text-align: left;
+    }
+    .guarantee-box {
+      border: 1px solid #FFC600;
+      border-radius: 5px;
+      overflow: hidden;
+      background-color: #111;
+    }
+    .guarantee-box .header {
+      background-color: #ff3b3b;
+      padding: 15px;
+      text-align: center;
+    }
+    .guarantee-box .header h2 {
+      font-size: 1.4em;
+      color: #fff;
+    }
+    .guarantee-box .body {
+      padding: 20px;
+    }
+    .guarantee-box .body p {
+      font-size: 1.1em;
+      margin-bottom: 1em;
+    }
+
+    /* Section 10 - Difference-Maker Box (Avoid Other Programs) */
+    .difference-maker {
+      max-width: 700px;
+      margin: 20px auto;
+      text-align: left;
+    }
+    .difference-maker .intro-text {
+      margin-bottom: 20px;
+      font-size: 1.1em;
+    }
+    .difference-maker .box {
+      border: 1px solid #FFC600;
+      border-radius: 5px;
+      overflow: hidden;
+      background-color: #111;
+    }
+    .difference-maker .box .header {
+      background-color: #ff0000;
+      padding: 15px;
+      text-align: center;
+    }
+    .difference-maker .box .header h2 {
+      font-size: 1.4em;
+      color: #fff;
+    }
+    .difference-maker .box .body {
+      padding: 20px;
+    }
+    .difference-maker .box .body p {
+      font-size: 1.1em;
+      margin-bottom: 1em;
+    }
+
+    /* Section 11 - CTA (Buy Now) */
+    .cta {
+      max-width: 700px;
+      margin: 20px auto;
+      text-align: center;
+      padding: 20px 0;
+    }
+    .cta .container {
+      background-color: #111;
+      border-radius: 8px;
+      border: 2px solid #FFC600;
+      padding: 30px;
+      box-shadow: 0 0 15px rgba(255,255,255,0.1);
+    }
+    .cta .cta-heading {
+      font-size: 2em;
+      color: #FFC600;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+    }
+    .cta .cta-subheading {
+      font-size: 1.3em;
+      margin-bottom: 20px;
+    }
+    .cta .cta-offer {
+      font-size: 1.2em;
+      background-color: #FFC600;
+      color: #000;
+      display: inline-block;
+      padding: 10px 20px;
+      border-radius: 5px;
+      margin-bottom: 20px;
+      font-weight: bold;
+    }
+    .cta .cta-benefits {
+      text-align: left;
+      margin: 20px auto;
+      max-width: 500px;
+      font-size: 1em;
+    }
+    .cta .cta-benefits li {
+      margin-bottom: 10px;
+      list-style: "✓ ";
+      padding-left: 10px;
+    }
+    .cta .cta-button {
+      display: inline-block;
+      background-color: #FFC600;
+      color: #000;
+      text-decoration: none;
+      padding: 15px 30px;
+      font-size: 1.2em;
+      font-weight: bold;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+      margin: 20px 0;
+    }
+    .cta .cta-button:hover {
+      background-color: #ffda4f;
+    }
+    .cta .cta-disclaimer {
+      font-size: 0.9em;
+      color: #ccc;
+      margin-top: 20px;
+    }
+    .cta .cta-footer {
+      margin-top: 30px;
+      font-size: 0.8em;
+      color: #999;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .hero .headline {
+        font-size: 2.5em;
+      }
+      .hero .subheadline {
+        font-size: 1.3em;
+      }
+      .guarantee .headline, .proof .headline, 
+      .buy-now .promo-heading, .why-my-program h1, 
+      .transformation h1 {
+        font-size: 1.8em;
+      }
+      .cta .cta-heading {
+        font-size: 1.8em;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- HEADER & NAVIGATION -->
+  <header>
+    <nav class="top-nav" aria-label="Top Navigation">
+      <a href="#loginSection" class="nav-item">Log In</a>
+      <a href="#buy-now" class="nav-item">Buy Now</a>
+      <a href="#testimonials" class="nav-item">Testimonials</a>
+      <a href="#why-my-program" class="nav-item">Why My Program?</a>
+      <a href="#avoid-other-programs" class="nav-item">Avoid Other Programs</a>
+      <a href="#leaderboard" class="nav-item">Leaderboard</a>
+      <a href="#faq" class="nav-item">Q/A</a>
+
+
+    </nav>
+  </header>
+
+  <main>
+    <!-- SECTION 1 - Hero Section -->
+    <section class="section hero" aria-label="Hero Section"> 
+      <div class="container container-1">
+        <h1 class="headline">FINALLY DUNK LIKE A TOTAL BADASS...</h1>
+        <p class="subheadline">The Ultimate Vertical Jump Cheat Codes By The Highest Jumper</p>
+        <div class="highlight-box">
+          <h2>THE #1 JUMP PROGRAM IN THE WORLD</h2>
+        </div>
+        <p class="description">
+            The Ultimate Vertical Jump Cheat Codes That Adds 
+          <strong>AT LEAST 7-12+ Inches</strong> To Your Vertical Jump...
+          In Less Than 5 Weeks.
+        </p>
+        <div class="video-container">
+            <h1> <b><u>Yup that's me! </h1></b></u> <br>
+          <iframe src="https://player.vimeo.com/video/1057046262" title="Intro Video" allow="autoplay; fullscreen" allowfullscreen></iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2 - Guaranteed Section -->
+    <section class="section guarantee" aria-label="Guaranteed Results">
+      <div class="container container-2">
+        <h2 class="headline">Guaranteed to Take <strong>YOU</strong> From Below The Rim<br/>
+          To Throwing Down Your Own Nasty Dunks <strong>IN LESS THAN 5 Weeks.</strong></h2>
+        <div class="content">
+          <p>Hey soon-to-be dunker,</p>
+          <p>I don’t care if you’re <strong>under 6 feet tall…</strong></p>
+          <p>If you’re <strong>un-athletic…</strong></p>
+          <p>Or you’ve already tried every <strong>bogus jump tutorial</strong> you could find on YouTube…</p>
+          <p>Before you give up on your dream of throwing down rim shaking dunks…</p>
+          <p>Let me tell you something…</p>
+          <p><span class="highlight">You CAN Dunk…</span></p>
+          <p>And over the next few minutes, I’m going to prove it to you beyond any reasonable doubt.</p>
+          <p>Because I’m going to teach you how you can use a <strong>3 step rim framework…</strong></p>
+          <p>It’s called <strong>AeroVolt </strong></p>
+          <p>And it’s a 3 step system you can use <strong>IMMEDIATELY</strong> to increase your jump a whopping <strong>9-15 inches…</strong></p>
+          <p>Heck, most people see <strong>BIG results</strong> in as little as just a few days…</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3 - Proof Section -->
+    <section class="section proof" aria-label="Proof Section">
+      <div class="container container-3">
+        <h2 class="headline"> <span class="highlight">AeroVolt</span> is the only system I know of that’s <span class="highlight">PROVEN</span> to boost your hops.</h2>
+        <div class="sub-lines">
+          <p>Regardless of your age...</p>
+          <p>Height...</p>
+          <p>Athleticism...</p>
+          <p>Genetics...</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4 - Testimonials -->
+    <section class="section testimonials" id="testimonials" aria-label="Testimonials">
+      <div class="container">
+        <h1>Take a quick look at what I mean...</h1>
+        <div class="video-grid">
+          <!-- Card 1 -->
+          <div class="card">
+            <p><strong><i>With the help of</i> AeroVolt ”</strong> I went from not being able to dunk to throwing it down in just a few weeks!</p>
+            <iframe src="https://player.vimeo.com/video/1057212273" title="Testimonial 1" allow="autoplay; fullscreen" allowfullscreen></iframe>
+          </div>
+          <!-- Card 2 -->
+          <div class="card">
+            <p>After only 3 weeks of <strong>AeroVolt</strong>, I was able to throw down my first dunk!</p>
+            <iframe src="https://player.vimeo.com/video/1057212280" title="Testimonial 2" allow="autoplay; fullscreen" allowfullscreen></iframe>
+          </div>
+          <!-- Card 3 -->
+          <div class="card">
+            <p>I used to just grab rim, but now I can easily dunk thanks to AeroVolt!</p>
+            <iframe src="https://player.vimeo.com/video/1057212287" title="Testimonial 3" allow="autoplay; fullscreen" allowfullscreen></iframe>
+          </div>
+          <!-- Card 4 -->
+          <div class="card">
+            <p>This program blew my mind—my vertical jump increased faster than I ever thought possible.</p>
+            <iframe src="https://player.vimeo.com/video/1057212964" title="Testimonial 4" allow="autoplay; fullscreen" allowfullscreen></iframe>
+          </div>
+          <!-- Card 5 -->
+          <div class="card">
+            <p>I was skeptical, but <strong>AeroVolt</strong> proved me wrong. I’ve gained several inches on my vertical already!</p>
+            <iframe src="https://player.vimeo.com/video/1057211857" title="Testimonial 5" allow="autoplay; fullscreen" allowfullscreen></iframe>
+          </div>
+          <!-- Card 6 -->
+          <div class="card">
+            <p>In just a few weeks, I can finally dunk—something I’ve dreamed of for years!</p>
+            <iframe src="https://player.vimeo.com/video/1057212147" title="Testimonial 6" allow="autoplay; fullscreen" allowfullscreen></iframe>
+          </div>
+          <!-- Card 7 -->
+          <div class="card">
+            <p>I never thought I'd see the day, but here I am, slamming it home thanks to <strong>AeroVolt</strong>.</p>
+            <iframe src="https://player.vimeo.com/video/1057212265" title="Testimonial 7" allow="autoplay; fullscreen" allowfullscreen></iframe>
+          </div>
+          <!-- Card 8 -->
+          <div class="card">
+            <p>My vertical jump skyrocketed—I can’t believe how quickly I’m improving!</p>
+            <iframe src="https://player.vimeo.com/video/1057212296" title="Testimonial 8" allow="autoplay; fullscreen" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5 - Results -->
+    <section class="section results" aria-label="Results">
+      <div class="container container-5">
+        <h2 class="headline">Keep in mind those are <strong>100% REAL</strong> results from real people just like you...</h2>
+        <p>And all of them have gone into it with one mission and come out on the other side a <strong>transformed DUNKING machine…</strong></p>
+        <p>And I can’t stress this enough:</p>
+        <p>This isn’t another one of those pointless jump tutorials.</p>
+        <p>You don’t need to do heavy squats…<br/>
+          Crazy box jumps…<br/>
+          Annoying Deadlifts…<br/>
+          Or anything like that.</p>
+        <p>In fact, if you stick with me for just a few moments you’ll learn some of the exercises you’re probably doing that are actually <strong>KILLING YOUR VERTICAL.</strong></p>
+        <p>But first I want to tell you a little more about my <strong>VERT SHOCK</strong> system…</p>
+        <p>So far, I’ve helped <strong>over 400 people</strong> experience what I would consider the best feeling in the world…</p>
+        <p><strong>Their very first dunk.</strong></p>
+      </div>
+    </section>
+
+    <!-- SECTION 6 - Buy Now (Single Video Promo) -->
+    <section class="section buy-now" id="buy-now" aria-label="Buy Now">
+      <div class="container">
+        <h2 class="promo-heading">Dm me to get your own custom program 💪📋⛹️‍♂️</h2>
+        <div class="video-container-6">
+          <iframe src="https://player.vimeo.com/video/1057221763" title="Buy Now Video" allow="autoplay; fullscreen" allowfullscreen></iframe>
+        </div>
+        <p class="caption"> @_thierrry dunking easily after joining my program</p>
+      </div>
+    </section>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8" />
+      <!-- Ensure proper scaling on mobile devices -->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      <meta name="description" content="AeroVolt  - The only proven jump-training system that transforms your vertical jump in 60 days.">
+      <title>AeroVolt  | Transform Your Vertical Jump</title>
+      <style>
+        /* RESET & BASE STYLES */
+        *, *::before, *::after {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+        }
+        html {
+          scroll-behavior: smooth;
+        }
+        body {
+          background-color: #000;
+          color: #fff;
+          font-family: Arial, sans-serif;
+          line-height: 1.5;
+          padding: 20px;
+        }
+        a {
+          color: #FFC600;
+          text-decoration: none;
+        }
+        a:hover {
+          text-decoration: underline;
+        }
+        /* TOP NAVIGATION */
+        header nav.top-nav {
+          display: flex;
+          justify-content: center;
+          gap: 15px;
+          margin-bottom: 30px;
+          flex-wrap: wrap;
+        }
+        header nav.top-nav a.nav-item {
+          background-color: #000;
+          border: 2px solid #ff0000;
+          padding: 10px 15px;
+          font-size: 1em;
+          font-weight: bold;
+          text-transform: uppercase;
+          transition: background-color 0.3s ease;
+        }
+        header nav.top-nav a.nav-item:hover {
+          background-color: #111;
+        }
+        /* LEADERBOARD SECTION */
+        #leaderboard {
+          max-width: 800px;
+          margin: 0 auto 30px auto;
+          text-align: center;
+        }
+        #leaderboard h2 {
+          color: #FFC600;
+          font-size: 2em;
+          margin-bottom: 15px;
+        }
+        #leaderboard table {
+          width: 100%;
+          border-collapse: collapse;
+          margin: 0 auto;
+        }
+        #leaderboard th, #leaderboard td {
+          border: 1px solid #FFC600;
+          padding: 10px;
+          text-align: center;
+        }
+        #leaderboard th {
+          background-color: #111;
+          color: #FFC600;
+        }
+        /* COMMON CONTAINER */
+        .container {
+          max-width: 1200px;
+          margin: 0 auto;
+          padding: 20px;
+        }
+        h1, h2, h3 {
+          margin-bottom: 15px;
+        }
+        /* SECTION STYLES */
+        .section {
+          padding: 20px 0;
+        }
+        /* Section 1 - Hero Section */
+        .hero {
+          text-align: center;
+        }
+        .hero .headline {
+          font-size: 3em;
+          font-weight: bold;
+          color: #FFC600;
+          text-transform: uppercase;
+          margin-bottom: 10px;
+        }
+        .hero .subheadline {
+          font-size: 1.5em;
+          font-style: italic;
+          color: #ccc;
+          margin-bottom: 30px;
+        }
+        .hero .highlight-box {
+          display: inline-block;
+          border: 3px solid #FFC600;
+          padding: 20px 30px;
+          margin-bottom: 30px;
+        }
+        .hero .highlight-box h2 {
+          font-size: 1.8em;
+          color: #FFC600;
+          text-transform: uppercase;
+        }
+        .hero .description {
+          font-size: 1.2em;
+          margin-bottom: 30px;
+          max-width: 800px;
+          margin-left: auto;
+          margin-right: auto;
+        }
+        .hero .video-container iframe {
+          width: 100%;
+          height: 450px;
+          border: none;
+        }
+        /* LOGIN SECTION */
+        .login-container {
+          max-width: 500px;
+          margin: 20px auto;
+          background-color: #222;
+          padding: 20px;
+          border: 2px solid #FFC600;
+          border-radius: 8px;
+          text-align: center;
+        }
+        .login-container h2 {
+          font-size: 2em;
+          color: #FFC600;
+          margin-bottom: 15px;
+        }
+        .login-container label {
+          display: block;
+          margin-bottom: 5px;
+          font-size: 1em;
+        }
+        .login-container input {
+          width: 100%;
+          padding: 10px;
+          margin-bottom: 15px;
+          border: 1px solid #FFC600;
+          border-radius: 5px;
+          background-color: #333;
+          color: #fff;
+        }
+        .login-container button {
+          width: 100%;
+          padding: 12px;
+          background-color: #FFC600;
+          border: none;
+          border-radius: 5px;
+          font-size: 1.1em;
+          font-weight: bold;
+          color: #000;
+          cursor: pointer;
+        }
+        .login-container button:hover {
+          background-color: #ffda4f;
+        }
+        /* PROTECTED CONTENT STYLES */
+        .protected-content {
+          display: none;
+          max-width: 800px;
+          margin: 20px auto;
+          padding: 20px;
+          background-color: #111;
+          border: 2px solid #FFC600;
+          border-radius: 8px;
+          text-align: left;
+        }
+        .protected-content h2 {
+          color: #FFC600;
+          font-size: 2em;
+          margin-bottom: 15px;
+        }
+        .protected-content h3 {
+          font-size: 1.5em;
+          margin-bottom: 10px;
+        }
+        .protected-content ul {
+          list-style: disc;
+          margin-left: 20px;
+          font-size: 1.1em;
+          margin-bottom: 15px;
+        }
+        .protected-content ul li {
+          margin-bottom: 5px;
+        }
+        /* PROGRAM INTRODUCTION STYLES */
+        .program-intro {
+          margin-bottom: 30px;
+        }
+        .program-intro h2 {
+          color: #FFC600;
+          font-size: 2em;
+          margin-bottom: 15px;
+        }
+        .program-intro p {
+          font-size: 1.1em;
+          margin-bottom: 15px;
+        }
+        .program-intro ul {
+          list-style: disc;
+          margin-left: 20px;
+          font-size: 1.1em;
+          margin-bottom: 15px;
+        }
+        .program-intro ul li {
+          margin-bottom: 5px;
+        }
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+          #leaderboard h2 {
+            font-size: 1.8em;
+          }
+          .login-container h2, .program-intro h2, .protected-content h2 {
+            font-size: 1.8em;
+          }
+        }
+      </style>
+    </head>
+    <body>
+    
+      <!-- LEADERBOARD SECTION (PUBLIC) -->
+      <section id="leaderboard">
+        <h2>Top 10 Vertical Jump Leaders</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Rank</th>
+              <th>Name</th>
+              <th>Vertical (inches)</th>
+              <th>Nationality</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>🥇 1st</td>
+              <td>Jason</td>
+              <td>46</td>
+              <td>🇺🇸 United States</td>
+            </tr>
+            <tr>
+              <td>🥈 2nd</td>
+              <td>Jonathan</td>
+              <td>42</td>
+              <td>🇺🇸 United States</td>
+            </tr>
+            <tr>
+              <td>🥉 3rd</td>
+              <td>Omar</td>
+              <td>41</td>
+              <td>🇦🇪 Dubai</td>
+            </tr>
+            <tr>
+              <td>🏅 4th</td>
+              <td>Jean</td>
+              <td>39</td>
+              <td>🇫🇷 France</td>
+            </tr>
+            <tr>
+              <td>🏅 5th</td>
+              <td>Alex</td>
+              <td>39</td>
+              <td>🇩🇪 Germany</td>
+            </tr>
+            <tr>
+              <td>🏅 6th</td>
+              <td>Tessel</td>
+              <td>38</td>
+              <td>🇬🇧 United Kingdom</td>
+            </tr>
+            <tr>
+              <td>🏅 7th</td>
+              <td>Robert</td>
+              <td>37</td>
+              <td>🇺🇸 United States</td>
+            </tr>
+            <tr>
+              <td>🏅 8th</td>
+              <td>Jacob</td>
+              <td>37</td>
+              <td>🇺🇸 United States</td>
+            </tr>
+            <tr>
+              <td>🏅 9th</td>
+              <td>Leo</td>
+              <td>35</td>
+              <td>🇱🇧 Lebanon</td>
+            </tr>
+            <tr>
+              <td>🏅 10th</td>
+              <td>Juan-Paolo</td>
+              <td>33</td>
+              <td>🇵🇹 Portugal</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    <!-- SECTION 7 - Let Me Be Clear -->
+    <section class="section clarity" aria-label="Let Me Be Clear">
+      <div class="container">
+        <p>And let me be clear...</p>
+        <p>I’d be a complete liar if I promised you were going to jump 50 inches…</p>
+        <p>That’s ridiculous.
+        <p>But, I will promise you one thing though…</p>
+        <p>If you follow this done-for-you roadmap…</p>
+        <p>Consisting of a few simple workouts each week…</p>
+        <p>You can throw down your very first slam<br/> in less than 8 weeks.</p>
+        <p>I promise you that.</p>
+        <p>Like I said, it is the best feeling in the world.</p>
+        <p>And today I’m sharing with you the roadmap to the dunk mecca…</p>
+        <p>It’s a new 37-day ELITE vertical trainer, which I call AeroVolt</p>
+        <p>And if you’re willing to stick with me for just a few minutes, I’m going to tell you everything you need to know.</p>
+        <p>Including exactly WHAT AeroVolt is…</p>
+        <p>WHY this training regimen works like a group of leg muscles that you likely never hear about…</p>
+        <p>WHO has already thrown down massive dunks by following this method…</p>
+        <p>And most importantly HOW you can use this method to dunk in less than 8 weeks.</p>
+        <p>But first let me ask you something…</p>
+      </div>
+    </section>
+
+    <!-- SECTION 7.5 - Why My Program? -->
+    <section class="section why-my-program" id="why-my-program" aria-label="Why My Program">
+      <div class="container">
+        <h1>Why My Program?</h1>
+        <p>Discover how my proven system delivers results that no other program can match. I’ve dedicated over 6 months to perfecting every detail—so you can achieve massive gains and finally start dunking like a pro.</p>
+      </div>
+    </section>
+
+    <!-- SECTION 8 - Life Transformation -->
+    <section class="section transformation" aria-label="Life Transformation">
+      <div class="container container-8">
+        <h1>What Would YOU Do If You Could Finally Dunk?</h1>
+        <p>Before I go any further…</p>
+        <p>I really want you to think about it.</p>
+        <p>What would your life be like if you could throw down high flying dunks with ease… anytime you wanted?</p>
+        <p>Would you finally get that starting spot on your team?</p>
+        <p>Maybe you’d be the star who always gets the rock when the game’s on the line…</p>
+        <p>Imagine your whole school… maybe whole town… watching you throw down the MASSIVE dunks in a big game…</p>
+        <p>Imagine going viral with videos all over Instagram and Facebook…</p>
+        <p>Imagine catching the attention of college scouts nationwide…</p>
+        <p>That’s what happened to me when I used this system for myself <br/>(And I’ll tell you all about that in a minute.)</p>
+        <p>But first let me just say…</p>
+        <p>When you can dunk consistently it feels like almost anything’s possible.</p>
+      </div>
+    </section>
+<!-- Navigation Button for Q/A -->
+<a href="#faq" class="nav-item">Q/A</a>
+
+<!-- FAQ Section -->
+<section id="faq" class="faq-section">
+  <h2>FAQs</h2>
+  <div class="faq-item">
+    <h3>What exactly am I getting?</h3>
+    <p>After/before buying, I will email your username/password to log into the members only portal. Inside you will be able to access the complete Vert Shock program along with all of the bonuses and Jump Like Justin free bonus course. You can access the members portal on any device connected to the internet!</p>
+  </div> <br>
+  <div class="faq-item">
+    <h3>How does it work?</h3> 
+    <p>AeroVolt uses strategic exercises and set/rep combinations to target your elastic muscle fibers. This produces explosive gains in your vertical jump.</p>
+  </div> <br>
+  <div class="faq-item">
+    <h3>Do I need any equipment?</h3>
+    <p>No. AeroVolt does NOT require any equipment or access to a gym. You can do the program at home.</p>
+  </div> <br>
+  <div class="faq-item">
+    <h3>Is it safe?</h3>
+    <p>Yes. AeroVolt does not use any heavy weight lifting so it will not stunt your growth. Vert Shock is safe for all ages. Of course you should check with your doctor before doing any physical exercise.</p>
+  </div> <br>
+  <div class="faq-item">
+    <h3>Does it expire or do I have lifetime access?</h3>
+    <p>After ordering Vert Shock today you will be locked in and have lifetime access to the program. Your AeroVolt program does not expire and you can log in as many times as you want.</p>
+  </div> <br>
+  <div class="faq-item">
+    <h3>I am in-season, can I still do it?</h3>
+    <p>Yes, and you will get the same if not better results even though you are training in-season. The intermittent training schedule allows for you to plan your workouts around practice times.</p>
+  </div> <br>
+  <div class="faq-item">
+    <h3>I can’t even touch the rim. Is AeroVolt too advanced for me?</h3>
+    <p>Nope. In fact, you are the exact type of person who will see the biggest jump gains from this program. You have so much room for improvement that just a few tweaks will see you gaining many inches very quickly.</p>
+  </div> <br>
+  <div class="faq-item">
+    <h3>What if I need help or have questions in the program?</h3>
+    <p>After you purchase you will instantly be given a login to the members only site. Here you will be able to read and post in the private forum as well as ask me any questions you may have.</p>
+  </div> <br>
+  <div class="faq-item">
+    <h3>I’m really busy, will this program take up all my time?</h3>
+    <p>No. We’ve designed this program for busy people like us so you only need less than an hour max 4 times per week to get all the results from it.</p>
+  </div> <br>
+  <div class="faq-item">
+    <h3>How long do I have to wait to get access to the AeroVolt?</h3>
+    <p>AeroVolt is a digital, online membership site meaning you get instant access to all the materials and videos the second you join, even if it's 4am. Since there’s nothing to mail and no physical books etc, we can keep our program really affordable, saving you a ton of money for all this cutting-edge training.</p>
+  </div> <br>
+  <div class="faq-item">
+    <h3>I’ve never even worked out before, can I still do it?</h3>
+    <p>AeroVolt is safe and works for all ages and levels. The program requires no weights or special equipment and can be done at home. Exercise videos of each movement are included so there is no prior workout experience needed.</p>
+  </div><br>
+  <div class="faq-item">
+    <h3>My jump is already pretty high at over 40 inches. Will AeroVolt help me?</h3> 
+    <p>Yes, but not as much as say, a newbie obviously. You’ll still be able to add a few inches to your hops without much trouble though.</p>
+  </div> <br>
+  <div class="faq-item">
+    <h3>Are the testimonials real?</h3>
+    <p>Yes! If you would like to get in touch with any of the athletes that provided testimonials just ask!</p>
+  </div> <br>
+</section>
+
+    <!-- SECTION 9 - Guarantee Box -->
+    <section class="section guarantee-box-section" aria-label="Guarantee">
+      <div class="container container-9">
+        <div class="guarantee-box">
+          <div class="header">
+            <h2>And I can guarantee you NONE of this will ever happen:</h2>
+          </div>
+          <div class="body">
+            <p>🚫 NO MORE stretching your shoulders out of their sockets just to swipe the net…</p>
+            <p>🚫 NO MORE being afraid to attack the rim in games and practice…</p>
+            <p>🚫 NO MORE feeling unconfident when you step foot on the court…</p>
+            <p>🚫 NO MORE whack tutorials and funky exercises trying to increase your vert…</p>
+            <p>And last but not least…</p>
+            <p>🚫 NO MORE sitting on the bench when you DESERVE to be out on the court dunking on people.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 10 - Difference-Maker Box (Avoid Other Programs) -->
+    <section class="section difference-maker" id="avoid-other-programs" aria-label="Difference Maker">
+      <div class="container">
+        <div class="intro-text">
+          <p>And before I show you this, you need to understand...</p>
+        </div>
+        <div class="box">
+          <div class="header">
+            <h2>What I’m about to show you is the difference-maker between AeroVolt and just about every other jump program on the web…</h2>
+          </div>
+          <div class="body">
+            <p>It’s the ‘secret sauce’ behind my 3-step system…</p>
+            <p>And it’s going to really piss a few people off.</p>
+            <p>Especially those YouTubers, who tell you to do box jumps, run bleachers…</p>
+            <p>Trust me, they DON’T CARE if you ever dunk…</p>
+            <p>In fact, in their eyes it’s probably better if you don’t.</p>
+            <p>And then they collect money from ads every time you watch their videos…</p>
+            <p>And then they stop uploading their videos…</p>
+            <p>And then they stop getting paid!</p>
+            <p>I’m seriously so sick of it.</p>
+            <p>Because over the past 10 years, I’ve spent very close to 10,000 hours refining this method.</p>
+            <p>And I know the REAL way to ramp up your vert… it all starts with targeting specific muscles & tendons & strings in your legs.</p>
+            <p>So right now, for the first time ever, I’m going to reveal this system.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+<!-- SECTION 11 - CTA (Buy Now) -->
+<section class="section cta" aria-label="Call to Action">
+    <div class="container container-11">
+      <div class="cta-container">
+        <h1 class="cta-heading">Grab Your Vertical Jump Cheat Codes!</h1>
+        <p class="cta-subheading">
+          The Ultimate Vertical Jump Cheat Codes <span class="cta-offer">$77</span>
+        </p>
+        <p>
+          I’m so confident you’ll love it that I’ll even hand you your <strong>username</strong> and <strong>password</strong> <u>before</u> you pay! That’s right—I trust you that much.
+        </p>
+        
+        <!-- Pricing Breakdown Section -->
+        <div class="pricing-breakdown" style="margin:20px 0; font-size:1.1em; line-height:1.6;">
+          <h2 style="margin-bottom:10px;">What You Get:</h2>
+          <ul style="list-style: none; padding: 0;">
+            <li style="margin-bottom:10px;">
+              <span class="emoji" style="font-size:1.3em;">✅</span>
+              <strong>Explosive Jump Training Program</strong>
+              <br>
+              <span class="price-details" style="font-size:1em;">
+                <del style="color:#a00;">❌ $100</del> → <span style="color:#080;">✅ $40</span>
+              </span>
+            </li>
+            <li style="margin-bottom:10px;">
+              <span class="emoji" style="font-size:1.3em;">✅</span>
+              <strong>Core &amp; Abs Training Plan</strong>
+              <br>
+              <span class="price-details" style="font-size:1em;">
+                <del style="color:#a00;">❌ $40</del> → <span style="color:#080;">✅ $9</span>
+              </span>
+            </li>
+            <li style="margin-bottom:10px;">
+              <span class="emoji" style="font-size:1.3em;">✅</span>
+              <strong>Stretching Routine After Every Workout</strong>
+              <br>
+              <span class="price-details" style="font-size:1em;">
+                <del style="color:#a00;">❌ $40</del> → <span style="color:#080;">✅ $9</span>
+              </span>
+            </li>
+            <li style="margin-bottom:10px;">
+              <span class="emoji" style="font-size:1.3em;">✅</span>
+              <strong>30-Day Flexibility &amp; Mobility Package</strong>
+              <br>
+              <span class="price-details" style="font-size:1em;">
+                <del style="color:#a00;">❌ $40</del> → <span style="color:#080;">✅ $9</span>
+              </span>
+            </li>
+            <li style="margin-bottom:10px;">
+              <span class="emoji" style="font-size:1.3em;">✅</span>
+              <strong>The Secret Nutrition Blueprint</strong>
+              <br>
+              <span class="price-details" style="font-size:1em;">
+                <del style="color:#a00;">❌ $40</del> → <span style="color:#080;">✅ $9</span>
+              </span>
+            </li>
+            <li style="margin-bottom:10px;">
+              <span class="emoji" style="font-size:1.3em;">✅</span>
+              <strong>20 Bonus Jump-Boosting Exercises</strong>
+              <br>
+              <span class="price-details" style="font-size:1em;">
+                <del style="color:#a00;">❌ $30</del> → <span style="color:#080;">✅ free</span>
+              </span>
+            </li>
+          </ul>
+          <p class="total-value" style="font-size:1.2em; font-weight:bold;">
+            TOTAL VALUE: <del style="color:#a00;">$260</del> → <span class="final-price">$77</span>
+          </p>
+        </div>
+        <!-- End Pricing Breakdown Section -->
+        
+        <ul class="cta-benefits">
+          <li>The Ultimate Vertical Jump Cheat Codes</li>
+          <li>Personalized support to help you soar above the rim</li>
+          <li>50 full days to transform your vertical—risk-free using my methods</li>
+          <li>Zero hidden fees, no monthly charges—just one small investment to gain 10 inches</li>
+        </ul>
+        <a href="https://www.paypal.me/wartiwarkasabian/77" class="cta-button" target="_blank">Yes! I Want to Dunk Now</a>
+  
+        <p class="cta-disclaimer">
+          *By clicking the button above, you secure your complete 50-day program at the unbeatable price of $77. No recurring fees—just one small investment for life-changing gains.
+        </p>
+        <div class="cta-footer">
+          &copy; 2025 AeroVolt. All rights reserved.<br/>
+          Follow me on Instagram: <strong>@hrairing</strong>
+        </div>
+      </div>
+    </div>
+  </section>
+  </main>
+  
+
+  <footer>
+    <!-- Additional footer content if needed -->
+  </footer>
+</body>
+</html>
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="AeroVolt - Transform Your Vertical Jump">
+  <title>Member Access -  AeroVolt Program</title>
+  <style>
+    /* RESET & BASE STYLES */
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      background-color: #000;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      line-height: 1.5;
+      padding: 20px;
+    }
+    a {
+      color: #FFC600;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Member Protected Content</title>
+  <style>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Member Protected Content</title>
+  <style>
+    /* LOGIN SECTION */
+    .login-container {
+      max-width: 500px;
+      margin: 20px auto;
+      background-color: #222;
+      padding: 20px;
+      border: 2px solid #FFC600;
+      border-radius: 8px;
+      text-align: center;
+    }
+    .login-container h2 {
+      font-size: 2em;
+      color: #FFC600;
+      margin-bottom: 15px;
+    }
+    .login-container label {
+      display: block;
+      margin-bottom: 5px;
+      font-size: 1em;
+    }
+    .login-container input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #FFC600;
+      border-radius: 5px;
+      background-color: #333;
+      color: #fff;
+    }
+    .login-container button {
+      width: 100%;
+      padding: 12px;
+      background-color: #FFC600;
+      border: none;
+      border-radius: 5px;
+      font-size: 1.1em;
+      font-weight: bold;
+      color: #000;
+      cursor: pointer;
+    }
+    .login-container button:hover {
+      background-color: #ffda4f;
+    }
+    /* PROTECTED CONTENT STYLES */
+    .protected-content {
+      display: none;
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #111;
+      border: 2px solid #FFC600;
+      border-radius: 8px;
+      text-align: left;
+    }
+    .protected-content h2 {
+      color: #FFC600;
+      font-size: 2em;
+      margin-bottom: 15px;
+    }
+    .protected-content h3 {
+      font-size: 1.5em;
+      margin-bottom: 10px;
+    }
+    .protected-content ul {
+      list-style: disc;
+      margin-left: 20px;
+      font-size: 1.1em;
+      margin-bottom: 15px;
+    }
+    .protected-content ul li {
+      margin-bottom: 5px;
+    }
+    /* PROGRAM INTRODUCTION STYLES */
+    .program-intro {
+      margin-bottom: 30px;
+    }
+    .program-intro h2 {
+      color: #FFC600;
+      font-size: 2em;
+      margin-bottom: 15px;
+    }
+    .program-intro p {
+      font-size: 1.1em;
+      margin-bottom: 15px;
+    }
+    .program-intro ul {
+      list-style: disc;
+      margin-left: 20px;
+      font-size: 1.1em;
+      margin-bottom: 15px;
+    }
+    .program-intro ul li {
+      margin-bottom: 5px;
+    }
+    /* TOP NAVIGATION (Integrated into Protected Content) */
+    .top-nav {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+      border: 2px solid #ff0000;
+      background-color: #000;
+      margin-bottom: 20px;
+      padding: 10px;
+    }
+    .top-nav a.nav-item {
+      color: #FFC600;
+      text-decoration: none;
+      font-size: 1em;
+      font-weight: bold;
+      text-transform: uppercase;
+      padding: 10px 15px;
+      transition: background-color 0.3s ease;
+    }
+    .top-nav a.nav-item:hover {
+      background-color: #111;
+    }
+  </style>
+</head>
+<body>
+
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Ultimate Vertical Jump Cheat Codes</title>
+  <style>
+    /* Add your CSS styling here if needed */
+    .protected-content { display: none; }
+    .login-container { max-width: 400px; margin: auto; padding: 20px; }
+    nav.top-nav { margin-bottom: 20px; }
+    nav.top-nav a { margin-right: 10px; text-decoration: none; color: blue; }
+    table { margin-top: 10px; }
+  </style>
+</head>
+<body>
+
+  <!-- LOGIN SECTION -->
+  <div class="login-container" id="loginSection">
+    <h2>Member Login</h2>
+    <form id="loginForm">
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" required />
+      
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required />
+      
+      <button type="submit">Log In</button>
+    </form>
+    <p style="font-size: 0.9em; color: #ccc; text-align: center;">
+      Not a member? 
+      <a href="#cta" class="nav-item">Sign Up</a>
+    </p>
+  </div>
+
+  <!-- PROTECTED CONTENT: The Ultimate Vertical Jump Cheat Codes Introduction -->
+  <div id="programIntro" class="protected-content">
+    <!-- Top Navigation for Membership Packages -->
+    <nav class="top-nav" aria-label="Protected Content Navigation">
+      <a href="#programIntro" class="nav-item">Jumping Program</a>
+      <a href="#coreAbs" class="nav-item">Core &amp; Abs Package</a>
+      <a href="#stretching" class="nav-item">Stretching Routines To Gain Height</a>
+      <a href="#flexibilityMobility" class="nav-item">Flexibility &amp; Mobility Package</a>
+      <a href="#secretNutrition" class="nav-item">Secret Nutrition Package</a>
+      <a href="#bonusExercises" class="nav-item">20 Bonus Jump-Boosting Exercises</a>
+    </nav>
+    
+    <h2>50-Day Program Introduction</h2>
+    <p>The 50-Day Jumping Program is designed to help athletes of all levels enhance their vertical jump, explosiveness, and overall athletic performance. Through a carefully structured plan of progressive plyometric exercises, strength-building movements, and flexibility training, this program ensures steady improvements over three months. With video-guided instructions and dedicated rest days for optimal recovery, participants will safely and effectively push their limits to achieve remarkable results. Whether you’re looking to dominate on the court or improve your fitness, this program is your ultimate guide to jumping higher and moving faster.</p>
+    <h3>Key Guidelines for the Program:</h3>
+    <p><strong>Breaks Between Exercises:</strong></p>
+    <ul>
+      <li>After each exercise, take a 1-minute 30-second break to catch your breath and get ready for the next one.</li>
+    </ul>
+    <p><strong>Breaks Between Sets:</strong></p>
+    <ul>
+      <li>When you finish one full round (set) of an exercise, rest for 45 seconds before starting again. It’s just enough time to stay strong!</li>
+    </ul>
+    <p><strong>Warm-Up:</strong></p>
+    <ul>
+      <li>Start every workout with 10 minutes of easy moves to warm up your body. Try:
+        <ul>
+          <li><strong>Jogging in Place:</strong> Lightly jog on the spot to elevate your heart rate. <em>Purpose:</em> Warms up the entire body.</li>
+          <li><strong>High Knees:</strong> Run in place while driving your knees up toward your chest. <em>Purpose:</em> Engages the hip flexors and warms up the legs.</li>
+          <li><strong>Butt Kicks:</strong> Jog in place, bringing your heels up to touch your glutes. <em>Purpose:</em> Activates the hamstrings.</li>
+          <li><strong>Arm Swings:</strong> Swing your arms forward and backward in a controlled motion. <em>Purpose:</em> Loosens up the shoulders and arms.</li>
+          <li><strong>Side Lunges:</strong> Step to the side, bend one knee, and shift your weight while keeping the other leg straight. <em>Purpose:</em> Stretches the inner thighs and warms up the hips.</li>
+          <li><strong>Jumping Jacks:</strong> Perform rhythmic jumps, bringing your arms overhead while spreading your legs, then returning to the starting position. <em>Purpose:</em> Full-body warm-up.</li>
+          <li><strong>Walking Lunges:</strong> Step forward into a lunge, alternating legs as you move forward. <em>Purpose:</em> Activates the glutes, quads, and hamstrings.</li>
+          <li><strong>Torso Twists:</strong> Stand upright and twist your torso side to side, letting your arms swing naturally. <em>Purpose:</em> Loosens the core and back.</li>
+          <li><strong>Side-to-Side Steps:</strong> Step laterally, alternating from side to side. <em>Purpose:</em> Warms up the lower body and engages the glutes.</li>
+          <li><strong>Dynamic Leg Kicks:</strong> Kick one leg straight up in front of you while reaching for it with the opposite hand. Alternate legs. <em>Purpose:</em> Stretches the hamstrings dynamically.</li>
+        </ul>
+      </li>
+    </ul>
+    <p><strong>What’s a Superset?</strong></p>
+    <ul>
+      <li>A superset is two exercises done back-to-back without a break. For example, do one set of Depth Jumps and then immediately do a set of Broad Jumps. Supersets help you get stronger and faster at the same time!</li>
+    </ul>
+    <p><strong>Watch the Videos!</strong></p>
+    <ul>
+      <li>Each exercise has a video to show you how to do it. Click the links in your workout plan to see how it’s done.</li>
+    </ul>
+    <p><strong>Stay Hydrated:</strong></p>
+    <ul>
+      <li>Drink water only during the workout. Take small sips so you don’t feel too full or uncomfortable.</li>
+    </ul>
+    <p><strong>Eat Light Before Working Out:</strong></p>
+    <ul>
+      <li>Don’t eat a big meal before exercising. Try a small snack like a banana or a handful of nuts. Eat this 20-30 minutes before your workout to give you energy.</li>
+    </ul>
+    <p><strong>Stretch After Your Workout:</strong></p>
+    <ul>
+      <li>After every workout, do some stretches to help your muscles feel better. Stretching makes you more flexible and keeps you from getting too sore.</li>
+    </ul>
+    <p><strong>Keep Track of Your Progress:</strong></p>
+    <ul>
+      <li>Write down how high you can jump or how many times you finish the exercises. It’s fun to see how much better you get over time!</li>
+    </ul>
+    <p><strong>Tools You’ll Need:</strong></p>
+    <ul>
+      <li>A sturdy box or platform to jump on.</li>
+      <li>A clear space to move around safely.</li>
+      <li>A mat to lay down on the floor during stretching.</li>
+    </ul>
+    <p><strong>Don’t Skip!</strong></p>
+    <ul>
+      <li>Follow the workout plan exactly. Every exercise, set, and rep is important for your results. Skipping steps might make it harder to reach your goals.</li>
+    </ul>
+    <p><strong>Be Safe!</strong></p>
+    <ul>
+      <li>Always use the correct form for each exercise. If something hurts (not just tiredness), stop and rest.</li>
+    </ul>
+    <p><strong>Sleep Well:</strong></p>
+    <ul>
+      <li>Get 9–12 hours of sleep every night. Sleep helps your body grow stronger and recover from workouts.</li>
+    </ul>
+    <p><strong>Stick to the Plan:</strong></p>
+    <ul>
+      <li>Don’t change the exercises in the program. Everything is planned to help you improve in the best way possible.</li>
+    </ul>
+    <p><em>Note:</em> Days not specifically mentioned in the program are designated as rest days. These rest days are crucial for recovery, muscle repair, and overall progress. Use them wisely by staying hydrated, eating well, and avoiding intense physical activities to prepare your body for the next workout.</p>
+    <p>By following these guidelines, you will maximize the benefits of the program, ensure safety, and see significant improvements over the 60 days. Click on the video links for detailed demonstrations of every exercise and execute them with proper form for the best results. Each exercise video is provided in the section below for easy access to proper demonstrations and techniques.</p>
+  </div>
+
+  <!-- PROTECTED CONTENT: Updated Program Details -->
+<div id="protectedContent" class="protected-content">
+  <h2>Cycle 1: (Foundation Phase)</h2>
+  
+  <div class="cycle">
+    <h3>(Day 2 - Monday)</h3>
+    <ul>
+      <li><strong>Warm-Up:</strong> 10 minutes dynamic stretches</li>
+      <li><strong>Meteor Tuck Blast:</strong> 3 x 6 reps</li>
+      <li><strong>One-Legged Ignition:</strong> 3 x 6 reps per leg</li>
+      <li><strong>Lateral Bound into Tuck:</strong> 3 x 6 reps</li>
+      <li><strong>Stretching:</strong> 15 minutes</li>
+    </ul>
+  </div>
+  
+  <div class="cycle">
+    <h3>(Day 4 - Wednesday)</h3>
+    <ul>
+      <li><strong>Warm-Up:</strong> 10 minutes</li>
+      <li><strong>Tornado Tuck:</strong> 3 x 6 reps</li>
+      <li><strong>Kneeling One-Leg Surge:</strong> 3 x 5 reps per leg</li>
+      <li><strong>Snap Switch Tuck:</strong> 3 x 6 reps</li>
+      <li><strong>Stretching:</strong> 15 minutes</li>
+    </ul>
+  </div>
+  
+  <div class="cycle">
+    <h3>(Day 6 - Friday)</h3>
+    <ul>
+      <li><strong>Warm-Up:</strong> 10 minutes</li>
+      <li><strong>Vortex Kick-Ups:</strong> 3 x 6 reps per leg</li>
+      <li><strong>Slingshot Kicks:</strong> 3 x 6 reps per leg</li>
+      <li><strong>Shockwave Toe Reach:</strong> 3 x 6 reps</li>
+      <li><strong>Stretching:</strong> 15 minutes</li>
+    </ul>
+  </div>
+  
+  <h2>Cycle 2: (Intensity Phase)</h2>
+  
+  <div class="cycle">
+    <h3>(Day 9 - Monday)</h3>
+    <ul>
+      <li><strong>Warm-Up:</strong> 10 minutes</li>
+      <li><strong>Toe Coil Tuck:</strong> 3 x 6 reps</li>
+      <li><strong>Kneeling Tendon Snap Kicks:</strong> 3 x 5 reps per leg</li>
+      <li><strong>Kneeling Tuck into Broad Jump into Foot Fire:</strong> 3 x 6 reps</li>
+      <li><strong>Stretching:</strong> 15 minutes</li>
+    </ul>
+  </div>
+  
+  <div class="cycle">
+    <h3>(Day 11 - Wednesday)</h3>
+    <ul>
+      <li><strong>Warm-Up:</strong> 10 minutes</li>
+      <li><strong>Lateral Hurdle Bounds:</strong> 3 x 6 reps</li>
+      <li><strong>Meteor Tuck Blast:</strong> 3 x 6 reps</li>
+      <li><strong>Rebound Knee Drive:</strong> 3 x 6 reps</li>
+      <li><strong>Stretching:</strong> 15 minutes</li>
+    </ul>
+  </div>
+  
+  <div class="cycle">
+    <h3>(Day 13 - Friday)</h3>
+    <ul>
+      <li><strong>Warm-Up:</strong> 10 minutes</li>
+      <li><strong>Shockwave Toe Reach:</strong> 3 x 6 reps</li>
+      <li><strong>One-Legged Ignition:</strong> 3 x 6 reps per leg</li>
+      <li><strong>Vortex Kick-Ups:</strong> 3 x 6 reps per leg</li>
+      <li><strong>Stretching:</strong> 15 minutes</li>
+    </ul>
+  </div>
+  
+  <h2>Cycle 3: (Performance Phase)</h2>
+  
+  <div class="cycle">
+    <h3>(Day 16 - Monday)</h3>
+    <ul>
+      <li><strong>Warm-Up:</strong> 10 minutes</li>
+      <li><strong>Tornado Tuck:</strong> 3 x 6 reps</li>
+      <li><strong>Snap Switch Tuck:</strong> 3 x 6 reps</li>
+      <li><strong>Lateral Bound into Tuck:</strong> 3 x 6 reps</li>
+      <li><strong>Stretching:</strong> 15 minutes</li>
+    </ul>
+  </div>
+  
+  <div class="cycle">
+    <h3>(Day 18 - Wednesday)</h3>
+    <ul>
+      <li><strong>Warm-Up:</strong> 10 minutes</li>
+      <li><strong>Toe Coil Tuck:</strong> 3 x 6 reps</li>
+      <li><strong>Slingshot Kicks:</strong> 3 x 6 reps per leg</li>
+      <li><strong>Kneeling One-Leg Surge:</strong> 3 x 5 reps per leg</li>
+      <li><strong>Stretching:</strong> 15 minutes</li>
+    </ul>
+  </div>
+  
+  <div class="cycle">
+    <h3>(Day 20 - Friday)</h3>
+    <ul>
+      <li><strong>Warm-Up:</strong> 10 minutes</li>
+      <li><strong>Kneeling Tendon Snap Kicks:</strong> 3 x 5 reps per leg</li>
+      <li><strong>Rebound Knee Drive:</strong> 3 x 6 reps</li>
+      <li><strong>Meteor Tuck Blast:</strong> 3 x 6 reps</li>
+      <li><strong>Stretching:</strong> 15 minutes</li>
+    </ul>
+  </div>
+  
+  <h2>Cycle 4: (Gradual Increase in Intensity While Keeping Variety)</h2>
+  
+  <div class="cycle">
+    <h3>(Day 23 - Monday)</h3>
+    <ul>
+      <li><strong>Warm-Up:</strong> 5 minutes light cardio/stretching</li>
+      <li><strong>Lateral Hurdle Bounds:</strong> 3 x 6 reps</li>
+      <li><strong>One-Legged Ignition:</strong> 3 x 5 reps per leg</li>
+      <li><strong>Kneeling Tuck into Broad Jump into Foot Fire:</strong> 3 x 6 reps</li>
+      <li><strong>Stretching:</strong> 20 minutes</li>
+    </ul>
+  </div>
+  
+  <div class="cycle">
+    <h3>(Day 25 - Wednesday)</h3>
+    <ul>
+      <li><strong>Warm-Up:</strong> 5 minutes light cardio/stretching</li>
+      <li><strong>Meteor Tuck Blast:</strong> 3 x 6 reps</li>
+      <li><strong>Tornado Tuck:</strong> 3 x 6 reps</li>
+      <li><strong>Snap Switch Tuck:</strong> 3 x 6 reps</li>
+      <li><strong>Stretching:</strong> 20 minutes</li>
+    </ul>
+  </div>
+  
+  <div class="cycle">
+    <h3>(Day 27 - Friday)</h3>
+    <ul>
+      <li><strong>Warm-Up:</strong> 5 minutes light cardio/stretching</li>
+      <li><strong>Vortex Kick-Ups:</strong> 3 x 6 reps per leg</li>
+      <li><strong>Slingshot Kicks:</strong> 3 x 6 reps per leg</li>
+      <li><strong>Shockwave Toe Reach:</strong> 3 x 6 reps</li>
+      <li><strong>Stretching:</strong> 20 minutes</li>
+    </ul>
+  </div>
+  
+  <h2>Cycle 5: (Maintaining Intensity and Peak Performance)</h2>
+  
+  <div class="cycle">
+    <h3>(Day 30 - Monday)</h3>
+    <ul>
+      <li><strong>Warm-Up:</strong> 5 minutes light cardio/stretching</li>
+      <li><strong>Toe Coil Tuck:</strong> 3 x 6 reps</li>
+      <li><strong>Kneeling Tendon Snap Kicks:</strong> 3 x 5 reps per leg</li>
+      <li><strong>Rebound Knee Drive:</strong> 3 x 6 reps</li>
+      <li><strong>Stretching:</strong> 20 minutes</li>
+    </ul>
+  </div>
+  
+  <div class="cycle">
+    <h3>(Day 32 - Wednesday)</h3>
+    <ul>
+      <li><strong>Warm-Up:</strong> 5 minutes light cardio/stretching</li>
+      <li><strong>Lateral Bound into Tuck:</strong> 3 x 6 reps</li>
+      <li><strong>Meteor Tuck Blast:</strong> 3 x 6 reps</li>
+      <li><strong>Tornado Tuck:</strong> 3 x 6 reps</li>
+      <li><strong>Stretching:</strong> 20 minutes</li>
+    </ul>
+  </div>
+  
+  <div class="cycle">
+    <h3>(Day 34 - Friday)</h3>
+    <ul>
+      <li><strong>Warm-Up:</strong> 5 minutes light cardio/stretching</li>
+      <li><strong>Snap Switch Tuck:</strong> 3 x 6 reps</li>
+      <li><strong>One-Legged Ignition:</strong> 3 x 5 reps per leg</li>
+      <li><strong>Kneeling One-Leg Surge:</strong> 3 x 5 reps per leg</li>
+      <li><strong>Stretching:</strong> 20 minutes</li>
+    </ul>
+  </div>
+  
+  <h2>Cycle 6: (Maximization Phase - Pushing Limits &amp; Advanced Explosiveness)</h2>
+  
+  <div class="cycle">
+    <h3>(Day 37 - Monday)</h3>
+    <ul>
+      <li><strong>Warm-Up:</strong> 5 minutes light cardio/stretching</li>
+      <li><strong>Vortex Kick-Ups:</strong> 3 x 6 reps per leg</li>
+      <li><strong>Slingshot Kicks:</strong> 3 x 6 reps per leg</li>
+      <li><strong>Shockwave Toe Reach:</strong> 3 x 6 reps</li>
+      <li><strong>Stretching:</strong> 20 minutes</li>
+    </ul>
+  </div>
+  
+  <div class="cycle">
+    <h3>(Day 39 - Wednesday)</h3>
+    <ul>
+      <li><strong>Warm-Up:</strong> 5 minutes light cardio/stretching</li>
+      <li><strong>Toe Coil Tuck:</strong> 3 x 6 reps</li>
+      <li><strong>Kneeling Tendon Snap Kicks:</strong> 3 x 5 reps per leg</li>
+      <li><strong>Kneeling Tuck into Broad Jump into Foot Fire:</strong> 3 x 6 reps</li>
+      <li><strong>Stretching:</strong> 20 minutes</li>
+    </ul>
+  </div>
+  
+  <div class="cycle">
+    <h3>(Day 41 - Friday)</h3>
+    <ul>
+      <li><strong>Warm-Up:</strong> 5 minutes light cardio/stretching</li>
+      <li><strong>Lateral Hurdle Bounds:</strong> 3 x 6 reps</li>
+      <li><strong>Meteor Tuck Blast:</strong> 3 x 6 reps</li>
+      <li><strong>Rebound Knee Drive:</strong> 3 x 6 reps</li>
+      <li><strong>Stretching:</strong> 20 minutes</li>
+    </ul>
+  </div>
+  
+  <h2>Cycle 7: (Final Peak - Ultimate Power &amp; Speed)</h2>
+  
+  <div class="cycle">
+    <h3>(Day 44 - Monday)</h3>
+    <ul>
+      <li><strong>Warm-Up:</strong> 5 minutes light cardio/stretching</li>
+      <li><strong>Tornado Tuck:</strong> 3 x 6 reps</li>
+      <li><strong>One-Legged Ignition:</strong> 3 x 5 reps per leg</li>
+      <li><strong>Snap Switch Tuck:</strong> 3 x 6 reps</li>
+      <li><strong>Stretching:</strong> 20 minutes</li>
+    </ul>
+  </div>
+  
+  <div class="cycle">
+    <h3>(Day 46 - Wednesday)</h3>
+    <ul>
+      <li><strong>Warm-Up:</strong> 5 minutes light cardio/stretching</li>
+      <li><strong>Kneeling Tuck into Broad Jump into Foot Fire:</strong> 3 x 6 reps</li>
+      <li><strong>Slingshot Kicks:</strong> 3 x 6 reps per leg</li>
+      <li><strong>Lateral Bound into Tuck:</strong> 3 x 6 reps</li>
+      <li><strong>Stretching:</strong> 20 minutes</li>
+    </ul>
+  </div>
+  
+  <div class="cycle">
+    <h3>(Day 48 - Friday, Peak Test Day)</h3>
+    <ul>
+      <li><strong>Warm-Up:</strong> 5 minutes light cardio/stretching</li>
+      <li><strong>Meteor Tuck Blast:</strong> 3 x 6 reps</li>
+      <li><strong>Maximum Effort Jumps (Test Your Max Vertical):</strong> 3 x 6 reps</li>
+      <li><strong>Shockwave Toe Reach:</strong> 3 x 6 reps</li>
+      <li><strong>Stretching:</strong> 20 minutes</li>
+    </ul>
+  </div>
+  
+</div>
+
+
+<!-- PROTECTED CONTENT: Final Section - Exercise Demonstrations & Outro -->
+<div id="finalDemo" class="protected-content">
+  <h2>Exercise Demonstrations</h2>
+  
+  <div class="cycle">
+    <h3>1. Kneeling Tendon Snap Kicks</h3>
+    <iframe src="https://player.vimeo.com/video/1059846136" title="Kneeling Tendon Snap Kicks" style="width:100%; height:300px; border:none; border-radius:5px;"></iframe>
+    <p><strong>Description:</strong> Perform rapid snapping motions from a kneeling position to activate and strengthen your tendons.</p>
+    <p><strong>Muscles Worked:</strong> Primarily targets the quadriceps, hamstrings, and lower leg muscles.</p>
+    <p><strong>Goal:</strong> Enhance explosive power and improve knee stability.</p>
+  </div>
+  
+  <div class="cycle">
+    <h3>2. Vortex Kick Ups</h3>
+    <iframe src="https://player.vimeo.com/video/1059845936" title="Vortex Kick Ups" style="width:100%; height:300px; border:none; border-radius:5px;"></iframe>
+    <p><strong>Description:</strong> Execute dynamic kick-ups to generate a vortex of power through your lower body.</p>
+    <p><strong>Muscles Worked:</strong> Engages the calves, quadriceps, and glutes.</p>
+    <p><strong>Goal:</strong> Build explosive leg strength and coordination.</p>
+  </div>
+  
+  <div class="cycle">
+    <h3>3. Snap Switch Tuck</h3>
+    <iframe src="https://player.vimeo.com/video/1059845786" title="Snap Switch Tuck" style="width:100%; height:300px; border:none; border-radius:5px;"></iframe>
+    <p><strong>Description:</strong> Rapidly switch your body position into a tuck to maximize explosive movement.</p>
+    <p><strong>Muscles Worked:</strong> Works the core, hip flexors, and lower body.</p>
+    <p><strong>Goal:</strong> Improve agility and quickness in transition movements.</p>
+  </div>
+  
+  <div class="cycle">
+    <h3>4. Toe Coil Tuck</h3>
+    <iframe src="https://player.vimeo.com/video/1059845612" title="Toe Coil Tuck" style="width:100%; height:300px; border:none; border-radius:5px;"></iframe>
+    <p><strong>Description:</strong> Engage your core and lower body with a dynamic toe coil tuck movement.</p>
+    <p><strong>Muscles Worked:</strong> Targets the core, hip flexors, and lower abdominals.</p>
+    <p><strong>Goal:</strong> Enhance core stability and coordination.</p>
+  </div>
+  
+  <div class="cycle">
+    <h3>5. Slingshot Kicks</h3>
+    <iframe src="https://player.vimeo.com/video/1059845255" title="Slingshot Kicks" style="width:100%; height:300px; border:none; border-radius:5px;"></iframe>
+    <p><strong>Description:</strong> Propel your legs forward in a slingshot motion to generate explosive force.</p>
+    <p><strong>Muscles Worked:</strong> Primarily the quadriceps, hamstrings, and calves.</p>
+    <p><strong>Goal:</strong> Increase explosive leg power and improve kicking speed.</p>
+  </div>
+  
+  <div class="cycle">
+    <h3>6. Shockwave Toe Reach</h3>
+    <iframe src="https://player.vimeo.com/video/1059845057" title="Shockwave Toe Reach" style="width:100%; height:300px; border:none; border-radius:5px;"></iframe>
+    <p><strong>Description:</strong> Extend your reach with powerful toe touches that create a shockwave effect.</p>
+    <p><strong>Muscles Worked:</strong> Focuses on the calves, quadriceps, and hip flexors.</p>
+    <p><strong>Goal:</strong> Enhance dynamic flexibility and explosive power in your lower body.</p>
+  </div>
+  
+  <div class="cycle">
+    <h3>7. Kneeling One Leg Surge</h3>
+    <iframe src="https://player.vimeo.com/video/1059844810" title="Kneeling One Leg Surge" style="width:100%; height:300px; border:none; border-radius:5px;"></iframe>
+    <p><strong>Description:</strong> Perform a surge from a kneeling position on one leg to focus unilateral power.</p>
+    <p><strong>Muscles Worked:</strong> Targets the glutes, quadriceps, and hamstrings of the active leg.</p>
+    <p><strong>Goal:</strong> Improve single-leg strength and balance.</p>
+  </div>
+  
+  <div class="cycle">
+    <h3>8. One-Legged Ignition</h3>
+    <iframe src="https://player.vimeo.com/video/1059844550" title="One-Legged Ignition" style="width:100%; height:300px; border:none; border-radius:5px;"></iframe>
+    <p><strong>Description:</strong> Ignite explosive power by performing jumps on one leg.</p>
+    <p><strong>Muscles Worked:</strong> Emphasizes the quadriceps, glutes, and calves of the working leg.</p>
+    <p><strong>Goal:</strong> Boost unilateral explosive strength and balance.</p>
+  </div>
+  
+  <div class="cycle">
+    <h3>9. Tornado Tuck</h3>
+    <iframe src="https://player.vimeo.com/video/1059844425" title="Tornado Tuck" style="width:100%; height:300px; border:none; border-radius:5px;"></iframe>
+    <p><strong>Description:</strong> Execute a twisting tuck jump to simulate the force of a tornado.</p>
+    <p><strong>Muscles Worked:</strong> Engages the core, hip flexors, and lower body muscles.</p>
+    <p><strong>Goal:</strong> Enhance rotational power and agility.</p>
+  </div>
+  
+  <div class="cycle">
+    <h3>10. Meteor Tuck Blast</h3>
+    <iframe src="https://player.vimeo.com/video/1059844259" title="Meteor Tuck Blast" style="width:100%; height:300px; border:none; border-radius:5px;"></iframe>
+    <p><strong>Description:</strong> Perform an explosive tuck jump that mimics the impact of a meteor blast.</p>
+    <p><strong>Muscles Worked:</strong> Targets the entire lower body with core stabilization.</p>
+    <p><strong>Goal:</strong> Maximize explosive power and vertical leap.</p>
+  </div>
+  
+  <div class="cycle">
+    <h3>11. Lateral Bound into a Tuck</h3>
+    <iframe src="https://player.vimeo.com/video/1027635616" title="Lateral Bound into a Tuck" style="width:100%; height:300px; border:none; border-radius:5px;"></iframe>
+    <p><strong>Description:</strong> Combine a lateral bound with an immediate tuck jump for dynamic movement.</p>
+    <p><strong>Muscles Worked:</strong> Focuses on the glutes, quadriceps, and core.</p>
+    <p><strong>Goal:</strong> Improve multi-directional explosiveness and coordination.</p>
+  </div>
+  
+  <div class="cycle">
+    <h3>12. Lateral Hurdle Bounds</h3>
+    <iframe src="https://player.vimeo.com/video/1027635387" title="Lateral Hurdle Bounds" style="width:100%; height:300px; border:none; border-radius:5px;"></iframe>
+    <p><strong>Description:</strong> Perform explosive bounds over hurdles laterally to enhance agility.</p>
+    <p><strong>Muscles Worked:</strong> Targets the glutes, adductors, and calves.</p>
+    <p><strong>Goal:</strong> Increase lateral power and improve balance during side-to-side movements.</p>
+  </div>
+  
+  <div class="cycle">
+    <h3>13. Kneeling Tuck into Broad Jumps x Foot Fire</h3>
+    <iframe src="https://player.vimeo.com/video/1027634743" title="Kneeling Tuck into Broad Jumps x Foot Fire" style="width:100%; height:300px; border:none; border-radius:5px;"></iframe>
+    <p><strong>Description:</strong> Start kneeling, perform a tuck jump transitioning into a broad jump, and finish with rapid foot taps.</p>
+    <p><strong>Muscles Worked:</strong> Engages the entire lower body and core.</p>
+    <p><strong>Goal:</strong> Develop multi-directional explosiveness and coordination.</p>
+  </div>
+  
+  <div class="cycle">
+    <h3>14. Stretching</h3>
+    <iframe src="https://player.vimeo.com/video/1025286916" title="Stretching" style="width:100%; height:300px; border:none; border-radius:5px;"></iframe>
+    <p><strong>Description:</strong> Perform a series of dynamic and static stretches to improve flexibility and aid recovery.</p>
+    <p><strong>Muscles Worked:</strong> Full-body focus, emphasizing flexibility in all major muscle groups.</p>
+    <p><strong>Goal:</strong> Enhance overall mobility and prevent injuries.</p>
+  </div>
+  
+  <div class="cycle">
+    <h3>15. Maximum Effort Jumps</h3>
+    <iframe src="https://player.vimeo.com/video/1025285561" title="Maximum Effort Jumps" style="width:100%; height:300px; border:none; border-radius:5px;"></iframe>
+    <p><strong>Description:</strong> Execute vertical jumps with maximum power to test your explosive capabilities.</p>
+    <p><strong>Muscles Worked:</strong> Primarily the glutes, quadriceps, hamstrings, and calves.</p>
+    <p><strong>Goal:</strong> Maximize vertical leap and overall explosive strength.</p>
+  </div>
+
+
+    <!-- Outro Section -->
+    <h2 style="color: #FFC600; font-size: 2em; margin: 25px 0 15px;">Outro to the 50-Day Jumping Program</h2>
+    <p style="font-size: 1.1em; margin-bottom: 15px;">
+      You’ve reached the end of the 50-Day Jumping Program—an incredible milestone in your journey to becoming a stronger, more explosive athlete. This program was designed to guide you step by step through progressive challenges, combining plyometric power, agility, and endurance to elevate your performance.
+    </p>
+    <p style="font-size: 1.1em; margin-bottom: 15px;">
+      Now that you’ve completed this journey:
+    </p>
+    <ul style="list-style: disc; margin-left: 20px; font-size: 1.1em; margin-bottom: 15px;">
+      <li>Take time to measure your progress and reflect on the hard work you’ve put in.</li>
+      <li>Continue practicing the skills and exercises you’ve learned to maintain and further improve your performance.</li>
+      <li>Remember, the benefits of this program go beyond physical improvements—they represent your discipline, consistency, and determination.</li>
+    </ul>
+    <p style="font-size: 1.1em; margin-bottom: 15px;">
+      Thank you for trusting this program to help you achieve your goals. Stay strong, stay consistent, and always aim higher—because your potential has no limits. Keep jumping higher and achieving more!
+    </p>
+    <p style="font-size: 1.1em;">
+      If you have questions, feedback, or want to share your results, feel free to reach out at <a href="mailto:hrairing@gmail.com" style="color: #FFC600;">hrairing@gmail.com</a> or call <strong>+96171909426</strong>.
+    </p>
+  </div>
+
+  <!-- Additional Protected Sections (placed after the final demo) -->
+  <div id="coreAbs" class="protected-content">
+    <h2>3 Elite Core &amp; Abs Workouts for Jumpers &amp; Basketball Players</h2>
+    <p>
+      Strong abs = Higher Jumps! Your core is the foundation of explosive power, stability, and balance when jumping, landing, and cutting on the court. These 3 workouts will engage your deep core muscles, develop strength in all movement planes, and build a rock-solid midsection for vertical jump improvement.
+    </p>
+    <p>
+      <strong>Workout Duration:</strong> 40 minutes each<br>
+      <strong>Workout Style:</strong> 3 rounds, 45 sec work / 15 sec rest between exercises, 60 sec rest between rounds.
+    </p>
+    
+    <h3>Workout 1: Explosive Core Power (For Maximum Jump Force)</h3>
+    <p>
+      This workout focuses on dynamic power and core activation to increase vertical jump height.
+    </p>
+    <table>
+      <thead>
+        <tr>
+          <th>Exercise</th>
+          <th>How to Do It</th>
+          <th>Reps / Time</th>
+          <th>Why It Works?</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Hanging Knee Raises 🏋️‍♂️</td>
+          <td>Hang from a bar, pull knees to chest without swinging.</td>
+          <td>12-15 reps</td>
+          <td>Strengthens hip flexors for a quicker knee drive in jumps.</td>
+        </tr>
+        <tr>
+          <td>Weighted Russian Twists 🏀</td>
+          <td>Hold a basketball or weight, twist side to side with control.</td>
+          <td>30 reps (15 per side)</td>
+          <td>Builds rotational strength for dunking &amp; landing balance.</td>
+        </tr>
+        <tr>
+          <td>Plank with Shoulder Taps 🤲</td>
+          <td>Hold a high plank, tap one shoulder at a time.</td>
+          <td>45 sec</td>
+          <td>Engages anti-rotational core stability for smoother take-offs.</td>
+        </tr>
+        <tr>
+          <td>V-Up Tucks 🏆</td>
+          <td>Lie flat, lift legs &amp; upper body together, then tuck knees in.</td>
+          <td>15 reps</td>
+          <td>Boosts core endurance &amp; strengthens lower abs.</td>
+        </tr>
+        <tr>
+          <td>Box Jump with Knee Tucks 🚀</td>
+          <td>Jump onto a box and tuck knees in mid-air.</td>
+          <td>12 reps</td>
+          <td>Directly trains explosive jumping power.</td>
+        </tr>
+        <tr>
+          <td>Med Ball Slam Twists 🏐</td>
+          <td>Slam a medicine ball side to side with full rotation.</td>
+          <td>10 reps per side</td>
+          <td>Increases explosive core rotation for dunking.</td>
+        </tr>
+      </tbody>
+    </table>
+    <p><strong>Final Challenge:</strong> 1 min Plank Hold (No breaks!)</p>
+    
+    <h3>Workout 2: Core Stability &amp; Control (For Better Balance &amp; Injury Prevention)</h3>
+    <p>
+      This routine strengthens the deep core muscles that stabilize your spine when landing &amp; changing direction.
+    </p>
+    <table>
+      <thead>
+        <tr>
+          <th>Exercise</th>
+          <th>How to Do It</th>
+          <th>Reps / Time</th>
+          <th>Why It Works?</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Dead Bug 🪲</td>
+          <td>Lie on your back, extend one arm &amp; opposite leg simultaneously.</td>
+          <td>12 reps per side</td>
+          <td>Develops core stability &amp; coordination.</td>
+        </tr>
+        <tr>
+          <td>Side Plank Reach-Throughs 🔄</td>
+          <td>Hold a side plank, rotate under &amp; reach through.</td>
+          <td>10 reps per side</td>
+          <td>Strengthens obliques for lateral agility.</td>
+        </tr>
+        <tr>
+          <td>Glute Bridge March 🍑</td>
+          <td>Lift hips, march knees up without dropping form.</td>
+          <td>12 reps per side</td>
+          <td>Engages glutes &amp; deep core stabilizers.</td>
+        </tr>
+        <tr>
+          <td>Hanging L-Sit Hold 🏋️‍♂️</td>
+          <td>Hang from a bar &amp; hold legs straight out.</td>
+          <td>30 sec</td>
+          <td>Builds core endurance for jump control.</td>
+        </tr>
+        <tr>
+          <td>Slow-Controlled Toes to Bar 🦶</td>
+          <td>Hang from a bar, lift toes slowly to touch the bar.</td>
+          <td>8 reps</td>
+          <td>Works lower abs &amp; hip flexors for knee drive in jumps.</td>
+        </tr>
+        <tr>
+          <td>Pallof Press with Band 🏋️‍♀️</td>
+          <td>Hold a resistance band, push arms out without twisting.</td>
+          <td>15 reps per side</td>
+          <td>Improves anti-rotational strength for stability.</td>
+        </tr>
+      </tbody>
+    </table>
+    <p><strong>Final Challenge:</strong> 30 sec Side Plank Hold Each Side</p>
+    
+    <h3>Workout 3: Explosive Core Endurance (For Fast-Twitch Muscle Activation)</h3>
+    <p>
+      This high-intensity workout will condition your abs to fire fast and sustain power for multiple jumps.
+    </p>
+    <table>
+      <thead>
+        <tr>
+          <th>Exercise</th>
+          <th>How to Do It</th>
+          <th>Reps / Time</th>
+          <th>Why It Works?</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Sprint Plank to Knee Drive 🏃</td>
+          <td>Start in a plank, explosively drive one knee up like sprinting.</td>
+          <td>30 reps (15 per side)</td>
+          <td>Mimics explosive knee drive in vertical jumps.</td>
+        </tr>
+        <tr>
+          <td>Jump Rope Core Burner 🔄</td>
+          <td>Jump rope while engaging your core for stability.</td>
+          <td>60 sec</td>
+          <td>Builds core endurance &amp; foot speed.</td>
+        </tr>
+        <tr>
+          <td>Hanging Windshield Wipers 🌪️</td>
+          <td>Hang from a bar, twist legs side to side in a controlled manner.</td>
+          <td>10 reps per side</td>
+          <td>Improves core control &amp; rotational strength.</td>
+        </tr>
+        <tr>
+          <td>Standing Med Ball Toss 🏀</td>
+          <td>Explosively throw a med ball straight up.</td>
+          <td>15 reps</td>
+          <td>Trains total-body coordination for jumps.</td>
+        </tr>
+        <tr>
+          <td>Jackknife Sit-Ups 🔥</td>
+          <td>Lie on your back, lift arms &amp; legs to meet in a V.</td>
+          <td>15 reps</td>
+          <td>Strengthens the entire core for power generation.</td>
+        </tr>
+        <tr>
+          <td>Box Jumps to Core Hold 🚀</td>
+          <td>Jump onto a box, land in a squat, and hold for 3 sec.</td>
+          <td>12 reps</td>
+          <td>Trains core control on impact landings.</td>
+        </tr>
+      </tbody>
+    </table>
+    <p><strong>Final Challenge:</strong> Max Reps Hanging Knee Raises 🏆</p>
+    
+    <h3>🔥 How to Pick the Best Workout for You?</h3>
+    <ul>
+      <li>🏆 Want to jump HIGHER &amp; dunk? → Workout 1 (Explosive Core Power)</li>
+      <li>⚡ Need more control &amp; balance? → Workout 2 (Core Stability &amp; Control)</li>
+      <li>🔥 Want endurance &amp; athleticism? → Workout 3 (Explosive Core Endurance)</li>
+    </ul>
+    <p>
+      🔑 Do this 3-4x per week, pick a different workout each time, and watch your jumping ability skyrocket! 🚀💪🏀
+    </p>
+  </div>
+  
+
+  <div id="stretching" class="protected-content">
+    <h2>Stretching Routines</h2>
+    
+    <h3>Workout 1: Full-Body Stretch for Jumpers (20 min)</h3>
+    <p><strong>Ideal for loosening up after intense plyometric and strength workouts</strong></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Exercise</th>
+          <th>How to Do It</th>
+          <th>Reps / Duration</th>
+          <th>Stretches / Benefit</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Standing Hamstring Stretch</td>
+          <td>Stand tall, extend one leg forward, and reach for your toes while keeping your back straight.</td>
+          <td>3 sets x 30 sec per leg</td>
+          <td>Hamstrings, lower back</td>
+        </tr>
+        <tr>
+          <td>Quad Stretch</td>
+          <td>Stand on one leg, grab the opposite ankle, and pull it toward your glutes.</td>
+          <td>3 sets x 20 sec per leg</td>
+          <td>Quads, hip flexors</td>
+        </tr>
+        <tr>
+          <td>Hip Flexor &amp; Psoas Stretch</td>
+          <td>Step one foot forward into a deep lunge and press hips down.</td>
+          <td>3 sets x 30 sec per leg</td>
+          <td>Hip flexors, glutes, quads</td>
+        </tr>
+        <tr>
+          <td>Seated Butterfly Stretch</td>
+          <td>Sit down, bring your feet together, and press your knees down gently.</td>
+          <td>3 sets x 25 sec</td>
+          <td>Groin, inner thighs</td>
+        </tr>
+        <tr>
+          <td>Calf Stretch Against Wall</td>
+          <td>Place your hands on a wall, step one foot back, and press your heel into the ground.</td>
+          <td>3 sets x 25 sec per leg</td>
+          <td>Calves, Achilles</td>
+        </tr>
+        <tr>
+          <td>Spinal Twist Stretch</td>
+          <td>Sit on the ground, cross one leg over the other, and twist your torso.</td>
+          <td>3 sets x 20 sec per side</td>
+          <td>Lower back, obliques</td>
+        </tr>
+        <tr>
+          <td>Lying Hamstring Stretch with Towel</td>
+          <td>Lie on your back, loop a towel around your foot, and pull your leg up straight.</td>
+          <td>3 sets x 25 sec per leg</td>
+          <td>Hamstrings, lower back</td>
+        </tr>
+        <tr>
+          <td>Cobra Stretch</td>
+          <td>Lie face down and push up into a backbend, keeping your hips on the ground.</td>
+          <td>3 sets x 20 sec</td>
+          <td>Lower back, abs</td>
+        </tr>
+        <tr>
+          <td>Child’s Pose</td>
+          <td>Sit back onto your heels with arms extended forward, resting your forehead on the floor.</td>
+          <td>3 sets x 25 sec</td>
+          <td>Lower back, shoulders, glutes</td>
+        </tr>
+      </tbody>
+    </table>
+    
+    <h3>Workout 2: Mobility-Focused Stretching for Explosive Jumping (20 min)</h3>
+    <p><strong>Perfect for improving range of motion and explosive power</strong></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Exercise</th>
+          <th>How to Perform</th>
+          <th>Duration / Reps</th>
+          <th>Benefit</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Deep Squat Hold</td>
+          <td>Sit into a deep squat and hold, keeping heels flat.</td>
+          <td>4 sets x 25 sec</td>
+          <td>Hips, ankles, lower back</td>
+        </tr>
+        <tr>
+          <td>Pigeon Pose Stretch</td>
+          <td>Bring one leg forward in a bent position while extending the other leg straight back.</td>
+          <td>4 sets x 20 sec per leg</td>
+          <td>Glutes, hip flexors</td>
+        </tr>
+        <tr>
+          <td>Seated Forward Fold</td>
+          <td>Sit with legs extended and reach for your toes.</td>
+          <td>4 sets x 30 sec</td>
+          <td>Hamstrings, lower back</td>
+        </tr>
+        <tr>
+          <td>Hip Circles</td>
+          <td>Stand on one leg and make big circles with the other leg.</td>
+          <td>3 sets x 15 reps per leg</td>
+          <td>Hip mobility, balance</td>
+        </tr>
+        <tr>
+          <td>Wall Calf Stretch</td>
+          <td>Place your hands on the wall and press your heel into the ground.</td>
+          <td>3 sets x 20 sec per leg</td>
+          <td>Calves, Achilles</td>
+        </tr>
+        <tr>
+          <td>Ankle Mobility Drill</td>
+          <td>Sit on the ground and rotate your ankles in slow circles.</td>
+          <td>3 sets x 15 reps per foot</td>
+          <td>Ankle flexibility, jump stability</td>
+        </tr>
+        <tr>
+          <td>Thoracic Spine Rotation</td>
+          <td>Lay on your side, twist your upper body open while keeping your knees together.</td>
+          <td>3 sets x 20 sec per side</td>
+          <td>Upper back, shoulders</td>
+        </tr>
+        <tr>
+          <td>Side Lunge Stretch</td>
+          <td>Shift your weight to one side in a deep lunge.</td>
+          <td>3 sets x 25 sec per side</td>
+          <td>Inner thighs, groin</td>
+        </tr>
+        <tr>
+          <td>Cat-Cow Stretch</td>
+          <td>On all fours, alternate between arching and rounding your back.</td>
+          <td>3 sets x 20 sec (flow)</td>
+          <td>Spinal mobility</td>
+        </tr>
+        <tr>
+          <td>Child’s Pose (Deep Breathing)</td>
+          <td>Finish with a deep breathing stretch in Child’s Pose.</td>
+          <td>45 sec</td>
+          <td>Relaxation, recovery</td>
+        </tr>
+      </tbody>
+    </table>
+    
+    <h3>Workout 3: Dynamic Recovery Stretch for Vertical Jump Gains (20 min)</h3>
+    <p><strong>Active movements for better blood flow and muscle elasticity</strong></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Exercise</th>
+          <th>How to Perform</th>
+          <th>Duration / Reps</th>
+          <th>Benefit</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Leg Swings (Front &amp; Side)</td>
+          <td>Hold onto a wall and swing one leg back and forth, then side to side.</td>
+          <td>4 sets x 15 reps per leg</td>
+          <td>Hip mobility, balance</td>
+        </tr>
+        <tr>
+          <td>Standing Knee-to-Chest Pulls</td>
+          <td>Pull one knee up to your chest while keeping the other leg straight.</td>
+          <td>3 sets x 15 sec per leg</td>
+          <td>Hip flexors, glutes</td>
+        </tr>
+        <tr>
+          <td>Walking Lunges with Overhead Reach</td>
+          <td>Step into a lunge while reaching your arms overhead.</td>
+          <td>3 sets x 10 reps per leg</td>
+          <td>Quads, hip flexors, shoulders</td>
+        </tr>
+        <tr>
+          <td>Spiderman Stretch</td>
+          <td>Step into a deep lunge, drop your elbow toward the ground, and hold.</td>
+          <td>3 sets x 20 sec per side</td>
+          <td>Hips, groin, lower back</td>
+        </tr>
+        <tr>
+          <td>Seated Glute Stretch</td>
+          <td>Cross one ankle over the opposite knee and lean forward.</td>
+          <td>3 sets x 20 sec per leg</td>
+          <td>Glutes, lower back</td>
+        </tr>
+        <tr>
+          <td>Downward Dog to Upward Dog Flow</td>
+          <td>Alternate between pushing your hips up and dropping them down into a cobra pose.</td>
+          <td>3 sets x 20 sec (moving)</td>
+          <td>Hamstrings, calves, back flexibility</td>
+        </tr>
+        <tr>
+          <td>Standing Toe Touch with Shoulder Rolls</td>
+          <td>Bend forward and reach for your toes while rolling your shoulders.</td>
+          <td>3 sets x 25 sec</td>
+          <td>Hamstrings, lower back, shoulders</td>
+        </tr>
+        <tr>
+          <td>Hip Openers</td>
+          <td>Sit with one leg bent and the other extended, lean into the bent knee.</td>
+          <td>3 sets x 20 sec per side</td>
+          <td>Hips, groin</td>
+        </tr>
+        <tr>
+          <td>Supine Spinal Twist</td>
+          <td>Lie on your back and twist one leg over the other.</td>
+          <td>3 sets x 25 sec per side</td>
+          <td>Lower back, core</td>
+        </tr>
+        <tr>
+          <td>Deep Breathing Stretch (Finish)</td>
+          <td>Lie in a relaxed position and focus on deep breathing.</td>
+          <td>45 sec</td>
+          <td>Recovery, relaxation</td>
+        </tr>
+      </tbody>
+    </table>
+    
+    <h3>Why These Stretches Matter for Your Vertical Jump 🚀🏀</h3>
+    <ul>
+      <li>✅ Loosens tight muscles for better jumping mechanics</li>
+      <li>✅ Enhances mobility in hips, ankles, and lower back</li>
+      <li>✅ Improves muscle recovery &amp; injury prevention</li>
+      <li>✅ Increases overall flexibility for explosive jumps</li>
+    </ul>
+    <p><strong>Tip:</strong> Do one of these stretching routines AFTER EVERY WORKOUT for maximum gains!</p>
+    
+  </div>
+  
+
+  <div id="flexibilityMobility" class="protected-content">
+    <h2>Flexibility &amp; Mobility Package for Jumpers &amp; Basketball Players</h2>
+    
+    <h3>🔥 Why Mobility &amp; Flexibility Matter for Jumping Higher?</h3>
+    <p>
+      Mobility and flexibility are the hidden keys to jumping higher, landing safely, and preventing injuries. A tight body = limited range of motion = less power output in your jumps. This package will focus on unlocking your hips, ankles, hamstrings, and spine, making your movements smoother, more explosive, and efficient.
+    </p>
+    
+    <h3>🦵 Mobility Workouts (Essential for Fluid &amp; Powerful Movement)</h3>
+    <p>🛑 Do these before workouts &amp; on rest days!</p>
+    <table>
+      <thead>
+        <tr>
+          <th>Exercise</th>
+          <th>How to Do It</th>
+          <th>Reps / Duration</th>
+          <th>Benefit</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>90/90 Hip Stretch 🧘</td>
+          <td>Sit with one leg at 90° in front and one at 90° behind. Lean forward slightly.</td>
+          <td>30 sec per side</td>
+          <td>Opens up hip mobility for better knee drive.</td>
+        </tr>
+        <tr>
+          <td>Ankle Dorsiflexion Stretch 🦶</td>
+          <td>Put one foot forward, keep heel down, and push knee past toes. Hold onto a wall.</td>
+          <td>10-15 reps per side</td>
+          <td>Increases ankle flexion for deeper squats and better landing absorption.</td>
+        </tr>
+        <tr>
+          <td>Cossack Squats 🏋️‍♂️</td>
+          <td>Stand wide, shift weight to one side into a deep squat, keeping the other leg straight.</td>
+          <td>8-12 reps per side</td>
+          <td>Improves lateral mobility and strengthens stabilizers.</td>
+        </tr>
+        <tr>
+          <td>Kneeling Hip Flexor Stretch 🤸‍♂️</td>
+          <td>Kneel on one leg, push hips forward, and engage glutes.</td>
+          <td>30 sec per side</td>
+          <td>Releases tight hip flexors, helping knee drive.</td>
+        </tr>
+        <tr>
+          <td>Wall Hip CARs 🔄</td>
+          <td>Stand beside a wall, move knee in a circular motion without rotating your torso.</td>
+          <td>5-8 reps per side</td>
+          <td>Improves hip control and rotational strength.</td>
+        </tr>
+      </tbody>
+    </table>
+    
+    <h3>🛠️ Basketball-Specific Mobility Drills</h3>
+    <p>🏀 These drills will make your first step quicker, increase your range of motion, and help avoid injuries!</p>
+    <table>
+      <thead>
+        <tr>
+          <th>Drill</th>
+          <th>How to Perform</th>
+          <th>Duration / Reps</th>
+          <th>Why It Works?</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Lateral Hip Flow 🚀</td>
+          <td>Start in a deep squat, shift weight side to side smoothly.</td>
+          <td>45 sec</td>
+          <td>Enhances lateral agility and hip control.</td>
+        </tr>
+        <tr>
+          <td>Overhead Squat with Resistance Band 🔥</td>
+          <td>Hold a band overhead and squat deep, keeping arms straight.</td>
+          <td>8 reps</td>
+          <td>Improves thoracic and shoulder mobility for better shooting &amp; jumping posture.</td>
+        </tr>
+        <tr>
+          <td>Jump Rope Mobility Drill 🔄</td>
+          <td>Rotate wrists loosely while jumping on one foot, switching sides.</td>
+          <td>30 sec per foot</td>
+          <td>Increases ankle stability and fast-twitch muscle response.</td>
+        </tr>
+        <tr>
+          <td>Walking Hamstring Stretch 🦵</td>
+          <td>Step forward, kick one leg up, and touch opposite hand to foot.</td>
+          <td>10 reps per side</td>
+          <td>Stretches hamstrings dynamically, preventing injuries.</td>
+        </tr>
+        <tr>
+          <td>Wall Ankle Mobility Drill 🦶</td>
+          <td>Stand facing a wall, push knee forward without lifting heel.</td>
+          <td>12 reps per side</td>
+          <td>Helps ankles absorb shock better during jumps.</td>
+        </tr>
+      </tbody>
+    </table>
+    
+    <h3>🔥 Jump-Boosting Flexibility Routine (Post-Workout)</h3>
+    <p>🛑 These static stretches will help lengthen muscles, increase flexibility, and enhance recovery!</p>
+    <table>
+      <thead>
+        <tr>
+          <th>Stretch</th>
+          <th>How to Perform</th>
+          <th>Hold Time</th>
+          <th>Why It Helps?</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Pike Stretch 🧎‍♂️</td>
+          <td>Sit on the floor, reach for your toes with a straight back.</td>
+          <td>30 sec</td>
+          <td>Stretches hamstrings for better jump mechanics.</td>
+        </tr>
+        <tr>
+          <td>Butterfly Stretch 🦋</td>
+          <td>Sit, bring feet together, push knees down gently.</td>
+          <td>30 sec</td>
+          <td>Opens up groin for lateral quickness.</td>
+        </tr>
+        <tr>
+          <td>Seated Hip External Rotator Stretch 🔄</td>
+          <td>Cross one leg over the other and twist towards the knee.</td>
+          <td>30 sec</td>
+          <td>Increases rotational mobility for dunking.</td>
+        </tr>
+        <tr>
+          <td>Couch Stretch 🛋️</td>
+          <td>Put one foot on a couch behind you, kneel forward into a lunge.</td>
+          <td>30 sec per side</td>
+          <td>Opens hip flexors for explosive take-offs.</td>
+        </tr>
+        <tr>
+          <td>Wall Calf Stretch 🏃</td>
+          <td>Place hands on a wall, press heel down with straight leg.</td>
+          <td>30 sec per side</td>
+          <td>Helps absorb impact when landing from jumps.</td>
+        </tr>
+      </tbody>
+    </table>
+    
+    <h3>🚀 How to Implement This Into Your Routine?</h3>
+    <ol>
+      <li><strong>Before workouts:</strong> 5-10 min of mobility work to loosen up hips, ankles, and shoulders.</li>
+      <li><strong>After workouts:</strong> 5-10 min of deep static stretching for muscle recovery.</li>
+      <li><strong>On rest days:</strong> 15-20 min of full-body mobility drills to keep joints fluid.</li>
+    </ol>
+    
+    <p>🔥 Stick to this plan, unlock your mobility, and your hops will be out of this world! 🚀🏀</p>
+  </div>
+  
+
+  <!-- SECRET NUTRITION PACKAGE -->
+  <div id="secretNutrition" class="protected-content">
+    <h2>Secret Nutrition Package</h2>
+    
+    <h3>🏀 Elite Basketball Nutrition Plan for Strength & Higher Jumps 🏀</h3>
+    <h4>💪 What to Eat (With Exact Quantities!) 💪</h4>
+
+    <h4>🔥 Protein Powerhouses (For muscle growth & recovery)</h4>
+    <ul>
+      <li>🥩 Lean beef – 150-200g per meal</li>
+      <li>🍗 Chicken breast – 150-200g per meal</li>
+      <li>🐟 Salmon – 120-180g, 3-4x per week</li>
+      <li>🥚 Eggs – 3-4 whole eggs per day</li>
+      <li>🍤 Shrimp – 120-180g per serving</li>
+      <li>🥜 Peanuts & almonds – 30-50g per snack</li>
+      <li>🥛 Greek yogurt – 200-250g per serving</li>
+      <li>🧀 Cottage cheese – 150-200g per serving</li>
+    </ul>
+
+    <h4>⚡ Energy-Boosting Carbs (For endurance & explosive power)</h4>
+    <ul>
+      <li>🍚 Brown rice – 100-150g (cooked) per meal</li>
+      <li>🍠 Sweet potatoes – 150-200g per meal</li>
+      <li>🍞 Whole wheat bread – 2-3 slices per meal</li>
+      <li>🥑 Oats – 50-80g per breakfast</li>
+      <li>🍌 Bananas – 1-2 per day</li>
+      <li>🍎 Apples – 1 per day</li>
+      <li>🍓 Berries – 100-150g per serving</li>
+    </ul>
+
+    <h4>🔋 Healthy Fats (For joint health & recovery)</h4>
+    <ul>
+      <li>🥑 Avocado – Half per meal</li>
+      <li>🥜 Nuts (walnuts, cashews, almonds) – 30-50g per snack</li>
+      <li>🫒 Olive oil – 1-2 tbsp per meal</li>
+      <li>🐟 Fatty fish – 2x per week (120-180g)</li>
+      <li>🥥 Coconut oil – 1 tbsp per meal</li>
+    </ul>
+
+    <h4>💦 Hydration & Electrolytes (For performance & recovery)</h4>
+    <ul>
+      <li>🚰 Water – 3-4L per day</li>
+      <li>🥤 Coconut water – 1 glass post-workout</li>
+      <li>🍊 Oranges – 1 per day</li>
+      <li>🥝 Kiwis – 1-2 per day</li>
+      <li>🍉 Watermelon – 200-300g per serving</li>
+      <li>🥒 Cucumbers – Unlimited</li>
+    </ul>
+
+    <h4>🔥 Jump-Boosting Supplements (Natural sources!)</h4>
+    <ul>
+      <li>🧂 Himalayan salt – ¼ tsp per liter of water</li>
+      <li>🍵 Green tea – 1 cup per day</li>
+      <li>🍶 Bone broth – 1 bowl 2-3x per week</li>
+    </ul>
+
+    <h3>❌ Foods to Avoid (Will Kill Your Gains!) ❌</h3>
+
+    <h4>🚫 Weakening Junk Foods:</h4>
+    <ul>
+      <li>🍟 French fries – Full of bad fats</li>
+      <li>🍕 Fast food – Processed and slows recovery</li>
+      <li>🌭 Processed meats – Contain chemicals that lower performance</li>
+      <li>🍩 Donuts & pastries – Too much sugar and trans fats</li>
+      <li>🥤 Soda & sugary drinks – Spikes insulin and kills energy</li>
+    </ul>
+
+    <h4>⚠️ Energy Killers:</h4>
+    <ul>
+      <li>🍬 Candy – Useless sugar</li>
+      <li>🍫 Milk chocolate – Switch to 85% dark chocolate instead</li>
+      <li>🍞 White bread – No nutrients, just empty carbs</li>
+      <li>🥣 Sugary cereals – Loaded with artificial sugar</li>
+    </ul>
+
+    <h4>💀 Inflammation Bombs:</h4>
+    <ul>
+      <li>🍔 Fried foods – Slows muscle recovery</li>
+      <li>🧈 Margarine – Bad fats that hurt joints</li>
+      <li>🍪 Packaged snacks – Fake ingredients</li>
+      <li>🍿 Microwave popcorn – Unhealthy oils</li>
+    </ul>
+
+    <h4>💤 Sleep Wreckers:</h4>
+    <ul>
+      <li>☕ Too much caffeine – Avoid after 5 PM</li>
+      <li>🍺 Alcohol – Lowers testosterone, weakens muscles</li>
+      <li>🌶️ Spicy foods before bed – Messes up sleep</li>
+    </ul>
+
+    <h3>⚡ Daily Meal Plan Example ⚡</h3>
+    
+    <table border="1" cellpadding="5" cellspacing="0" style="width:100%; border-collapse: collapse;">
+      <thead>
+        <tr style="background-color: #f2f2f2;">
+          <th>Meal</th>
+          <th>Food Items & Quantities</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>🥞 Breakfast</td>
+          <td>3 eggs, 80g oats, 1 banana, 1 tbsp peanut butter, 200ml milk</td>
+        </tr>
+        <tr>
+          <td>🍗 Lunch</td>
+          <td>200g chicken, 150g brown rice, 1 avocado, 1 orange</td>
+        </tr>
+        <tr>
+          <td>💪 Pre-Workout Snack</td>
+          <td>30g nuts, 1 kiwi, 1 tbsp honey</td>
+        </tr>
+        <tr>
+          <td>🏋️ Post-Workout Meal</td>
+          <td>150g salmon, 200g sweet potatoes, 250ml coconut water</td>
+        </tr>
+        <tr>
+          <td>🍽️ Dinner</td>
+          <td>180g lean beef, 150g quinoa, 1 tbsp olive oil, steamed veggies</td>
+        </tr>
+        <tr>
+          <td>🌙 Night Snack</td>
+          <td>200g Greek yogurt, 1 tbsp honey, 30g almonds</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>Stick to this GOAT fuel plan, avoid the trash foods, and your hops will be insane! 🏆💪🚀</p>
+  </div>
+
+  <div id="bonusExercises" class="protected-content">
+    <h2>20 Insane Vertical Jump Exercises (Not in Your Program)</h2>
+    
+    <h3>🔥 Explosive Power &amp; Plyometric Drills</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Exercise</th>
+          <th>How to Do It</th>
+          <th>Reps / Sets</th>
+          <th>Why It Works</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Resistance Band Broad Jumps</td>
+          <td>
+            Attach a resistance band around your waist and secure it to an anchor behind you. Perform broad jumps as far as possible, resisting the band’s pull.
+          </td>
+          <td>3 sets of 4 reps</td>
+          <td>Increases force production and explosive power.</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Trap Bar Jump Squats</td>
+          <td>
+            Hold a trap bar, squat down, and explode upwards into a jump. Land softly and reset.
+          </td>
+          <td>3 sets of 6 reps</td>
+          <td>Adds weight to your jumps, improving raw power.</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Weighted Depth Jumps</td>
+          <td>
+            Hold light dumbbells (5-10 lbs) in each hand. Step off a box and explode into a vertical jump. Land softly.
+          </td>
+          <td>3 sets of 5 reps</td>
+          <td>Adds overload to your landing and takeoff, increasing jump strength.</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>Hurdle Jumps into Sprint</td>
+          <td>
+            Set up 3-5 hurdles 1-2 feet apart. Jump over each hurdle without stopping, then sprint for 10-15 meters after the last jump.
+          </td>
+          <td>3 sets</td>
+          <td>Improves elasticity and reactive strength for powerful jumps.</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>Tuck Jump to Lunge Explosion</td>
+          <td>
+            Perform a tuck jump, landing softly into a lunge. Explode from the lunge position into another tuck jump.
+          </td>
+          <td>4 sets of 6 reps</td>
+          <td>Strengthens both explosive and stabilizing muscles.</td>
+        </tr>
+      </tbody>
+    </table>
+    
+    <h3>💪 Strength-Based Exercises</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Exercise</th>
+          <th>How to Do It</th>
+          <th>Reps / Sets</th>
+          <th>Why It Works</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>6</td>
+          <td>Bulgarian Split Squats (Jump Focused)</td>
+          <td>
+            Place one foot on a bench behind you. Squat down and explode up into a jump using only the front leg.
+          </td>
+          <td>3 sets of 8 reps per leg</td>
+          <td>Increases single-leg power and balance.</td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td>Hex Bar Deadlifts for Jumping</td>
+          <td>
+            Stand inside a hex bar and deadlift with controlled speed. Lower slowly to increase eccentric strength.
+          </td>
+          <td>3 sets of 6 reps</td>
+          <td>Develops posterior chain power, critical for vertical jump.</td>
+        </tr>
+        <tr>
+          <td>8</td>
+          <td>Deep Pause Squats</td>
+          <td>
+            Squat below parallel, pause for 3 seconds, then explode up.
+          </td>
+          <td>3 sets of 5 reps</td>
+          <td>Builds eccentric control and leg drive.</td>
+        </tr>
+        <tr>
+          <td>9</td>
+          <td>Reverse Nordics (Quad Strength)</td>
+          <td>
+            Kneel on the ground and slowly lean backward, keeping your body straight. Return to start.
+          </td>
+          <td>3 sets of 8 reps</td>
+          <td>Strengthens quads and reduces injury risk.</td>
+        </tr>
+        <tr>
+          <td>10</td>
+          <td>Depth Step-Ups into Knee Drive</td>
+          <td>
+            Stand on a high box (16-24 inches). Step down and explode up, driving your knee as high as possible.
+          </td>
+          <td>3 sets of 6 reps per leg</td>
+          <td>Mimics jumping mechanics with resistance.</td>
+        </tr>
+      </tbody>
+    </table>
+    
+    <h3>🔋 Mobility &amp; Flexibility Enhancers</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Exercise</th>
+          <th>How to Do It</th>
+          <th>Reps / Sets</th>
+          <th>Why It Works</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>11</td>
+          <td>Wall Hip Flexor Holds</td>
+          <td>
+            Stand against a wall with one foot raised at 90°.
+          </td>
+          <td>30 sec per leg (3 sets)</td>
+          <td>Improves knee drive and jumping efficiency.</td>
+        </tr>
+        <tr>
+          <td>12</td>
+          <td>Couch Stretch (Hip Opener)</td>
+          <td>
+            Place one foot on a bench and kneel down. Lean back slightly to feel the stretch.
+          </td>
+          <td>40 sec per leg</td>
+          <td>Enhances hip extension for better takeoff.</td>
+        </tr>
+        <tr>
+          <td>13</td>
+          <td>Jefferson Curls (Spinal Mobility)</td>
+          <td>
+            Hold a light weight, tuck your chin, and slowly roll down one vertebra at a time. Hold at the bottom, then return up.
+          </td>
+          <td>3 sets of 5 reps</td>
+          <td>Improves hamstring flexibility and jump posture.</td>
+        </tr>
+        <tr>
+          <td>14</td>
+          <td>90/90 Hip Stretch</td>
+          <td>
+            Sit with one leg in front at a 90° angle and the other behind at 90°. Lean forward and hold.
+          </td>
+          <td>30 sec per side</td>
+          <td>Increases hip mobility for explosive movements.</td>
+        </tr>
+      </tbody>
+    </table>
+    
+    <h3>⚡ Isometric &amp; Reactive Strength Drills</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Exercise</th>
+          <th>How to Do It</th>
+          <th>Reps / Sets</th>
+          <th>Why It Works</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>15</td>
+          <td>Isometric Wall Sit with Calf Raise</td>
+          <td>
+            Perform a wall sit at 90°. Lift heels off the ground and hold.
+          </td>
+          <td>30 sec (3 sets)</td>
+          <td>Builds static strength in key jump muscles.</td>
+        </tr>
+        <tr>
+          <td>16</td>
+          <td>Weighted Pogo Hops (Ankle Reactivity)</td>
+          <td>
+            Hold light dumbbells and perform quick, low jumps without bending knees.
+          </td>
+          <td>4 sets of 20 reps</td>
+          <td>Develops ankle stiffness for explosive jumps.</td>
+        </tr>
+        <tr>
+          <td>17</td>
+          <td>Overcoming Isometric Squats</td>
+          <td>
+            Push against an immovable object in a squat position for 6 seconds.
+          </td>
+          <td>3 reps per set, 3 sets</td>
+          <td>Increases force production instantly.</td>
+        </tr>
+        <tr>
+          <td>18</td>
+          <td>Depth Drop Holds (Landing Stability)</td>
+          <td>
+            Step off a box and stick the landing without movement. Hold for 3 seconds before standing up.
+          </td>
+          <td>3 sets of 6 reps</td>
+          <td>Improves landing mechanics to prevent injury.</td>
+        </tr>
+      </tbody>
+    </table>
+    
+    <h3>🏀 Jump-Specific Enhancers</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Exercise</th>
+          <th>How to Do It</th>
+          <th>Reps / Sets</th>
+          <th>Why It Works</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>19</td>
+          <td>Reverse Step-Up into Jump</td>
+          <td>
+            Step backward off a low box, then immediately explode into a jump.
+          </td>
+          <td>3 sets of 6 reps per leg</td>
+          <td>Simulates basketball step-back movements.</td>
+        </tr>
+        <tr>
+          <td>20</td>
+          <td>Rebound Box Jumps</td>
+          <td>
+            Jump onto a box, step off quickly, and explode into another jump.
+          </td>
+          <td>3 sets of 5 reps</td>
+          <td>Trains elasticity for rapid bounce and higher jumps.</td>
+        </tr>
+      </tbody>
+    </table>
+    
+    <h3>🚀 How to Add These to Your Program</h3>
+    <ul>
+      <li>✔ Add 2-3 exercises per session to complement your current routine.</li>
+      <li>✔ Focus on explosive exercises on jump days.</li>
+      <li>✔ Include mobility drills on rest days.</li>
+      <li>✔ Gradually increase intensity for progressive overload.</li>
+    </ul>
+    <p>🔥 Incorporating these extra drills will make your vertical jump absolutely unstoppable! 🚀🏆</p>
+  </div>
+  
+ <!-- JAVASCRIPT FOR LOGIN -->
+<script>
+  document.getElementById('loginForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    // Get credentials
+    const username = document.getElementById('username').value;
+    const password = document.getElementById('password').value;
+    
+    // Check credentials
+    if (username === "member" && password === "gain10inches") {
+      alert("Access granted!");
+      // Hide the login section
+      document.getElementById('loginSection').style.display = 'none';
+      // Reveal all protected content sections
+      document.getElementById('programIntro').style.display = 'block';
+      document.getElementById('protectedContent').style.display = 'block';
+      // Removed: document.getElementById('protectedContentPart2').style.display = 'block';
+      document.getElementById('finalDemo').style.display = 'block';
+      document.getElementById('coreAbs').style.display = 'block';
+      document.getElementById('stretching').style.display = 'block';
+      document.getElementById('flexibilityMobility').style.display = 'block';
+      document.getElementById('secretNutrition').style.display = 'block';
+      document.getElementById('bonusExercises').style.display = 'block';
+    } else {
+      alert("Access Denied. Incorrect username or password.");
+    }
+  });
+</script>
+
+</body>
+<button id="backToTop" style="position: fixed; bottom: 20px; left: 20px; padding: 10px 15px; background-color: #FFC600; color: #000; border: none; border-radius: 5px; cursor: pointer; z-index: 9999;">
+  Back to the Top
+</button>
+
+<script>
+  document.getElementById("backToTop").addEventListener("click", function() {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+</script>
+
+</html>
